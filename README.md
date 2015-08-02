@@ -1,6 +1,6 @@
 # lander
 
-A Clojure library that creates a simple lunar lander type game.
+A Clojure library that implements Reynold's Flocking Behaviors.
 
 ## Usage
 
