@@ -13,11 +13,11 @@
 
 (defn wrap [{{:keys [minx maxx miny maxy]} :world :as s}]
   (-> s
-      (update-in [:lander :state 1] #(w % minx maxx))
-      (update-in [:lander :state 2] #(w % miny maxy))))
+      (update-in [:boid :state 1] #(w % minx maxx))
+      (update-in [:boid :state 2] #(w % miny maxy))))
 
-(defn sim[{:keys [time lander] :as s}]
-  (let [{:keys [state behaviors] } lander
+(defn sim[{:keys [time boid] :as s}]
+  (let [{:keys [state behaviors] } boid
         t (.getTime #?(:clj (java.util.Date.) :cljs (js/Date.)))
         dt (* (- t (or time t)) 1E-3)
         pos (subvec state 1 3)
@@ -33,6 +33,6 @@
         new-states (reduce into [tprime] [pprime vp])]
     (-> s
         (into { :time t })
-        (assoc-in [:lander :state] new-states)
-        (update-in [:lander :behaviors :wander] rules/update-wander)
+        (assoc-in [:boid :state] new-states)
+        (update-in [:boid :behaviors :wander] rules/update-wander)
         wrap)))
