@@ -1,9 +1,9 @@
 (ns flocking.quil-renderer
   (:require [quil.core :as q #?@(:cljs [:include-macros true])]))
 
-(defn draw-boid [{{[_ px py vx vy] :state
-                   { {:keys [wander-direction wander-strength wander-rate]} :wander } :behaviors
-                   :keys [width height]} :boid }]
+(defn draw-boid [{[px py vx vy] :state
+                  { {:keys [wander-direction wander-strength wander-rate]} :wander } :behaviors
+                  :keys [width height]}]
   (let [tw (* 0.5 width) th (* 0.5 height)]
     (q/with-translation
       [px py]
@@ -30,8 +30,8 @@
           (q/stroke 0 255 0)
           (q/triangle (- tw) (- th) 0 th tw (- th)))))))
 
-(defn draw [state]
-  (let [{{ :keys [minx maxx miny maxy] } :world } state
+(defn draw [{:keys [world boids]}]
+  (let [{ :keys [minx maxx miny maxy] } world
         dx (- maxx minx) dy (- maxy miny)
         max-world-dim (max dx dy)
         w (q/width) h (q/height)
@@ -42,4 +42,4 @@
       (q/scale 1 -1)
       (q/scale (/ min-screen-dim max-world-dim))
       (q/stroke-weight (/ max-world-dim min-screen-dim))
-      (draw-boid state))))
+      (doseq [boid boids] (draw-boid boid)))))

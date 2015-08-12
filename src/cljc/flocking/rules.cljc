@@ -8,7 +8,7 @@
 
 (defn tovec[m d]((juxt #(* m (Math/cos %)) #(* m (Math/sin %))) d))
 
-(defn wander [velocity {:keys [wander-direction wander-strength] :as s}]
+(defn wander [velocity {:keys [wander-direction wander-strength]}]
   (let [m (Math/sqrt (reduce + (map * velocity velocity)))
         f (if (zero? m) velocity (map #(* (Math/sqrt 2.0) (/ % m)) velocity))
         w (tovec wander-strength wander-direction)]
