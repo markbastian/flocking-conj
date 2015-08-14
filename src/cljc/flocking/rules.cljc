@@ -1,4 +1,5 @@
-(ns flocking.rules)
+(ns flocking.rules
+  (:require [vecmath.vec :as vec]))
 
 ;http://www.red3d.com/cwr/steer/Wander.html
 ;https://www.khanacademy.org/computer-programming/boid-seek-arrive-wander-behaviors/5939360759808000
@@ -9,8 +10,18 @@
 (defn tovec[m d]((juxt #(* m (Math/cos %)) #(* m (Math/sin %))) d))
 
 (defn wander [velocity {:keys [wander-direction wander-strength]}]
-  (let [m (Math/sqrt (reduce + (map * velocity velocity)))
+  (let [m (vec/mag velocity)
         f (if (zero? m) velocity (map #(* (Math/sqrt 2.0) (/ % m)) velocity))
         w (tovec wander-strength wander-direction)]
-    (mapv + f w)))
+    (vec/add f w)))
 
+(defn gen-wander []
+  { :wander-direction (* 2 Math/PI (Math/random))
+   :wander-rate (Math/random)
+   :wander-strength (Math/random) })
+
+(defn find-nearest [boid boids]
+  )
+
+(defn gen-flock []
+  { :avoidance-range 1.0 })
