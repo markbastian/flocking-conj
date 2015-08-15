@@ -17,6 +17,17 @@
       (update-in [:state 0 0] #(w % minx maxx))
       (update-in [:state 0 1] #(w % miny maxy))))
 
+(defn wall-force [pos wall]
+  (let [d (vec/sub pos wall)
+        m (vec/mag d)]
+    (vec/scale d (/ 1.0 m m m))))
+
+(defn wall-avoidance [[x y :as pos] {:keys [minx maxx miny maxy]}]
+  (mapv + (wall-force pos [minx y])
+        (wall-force pos [maxx y])
+        (wall-force pos [x miny])
+        (wall-force pos [x maxy])))
+
 (defn sim-boid [{:keys [state behaviors] :as boid-state } boids dt world ap av]
   (let [[pos vel] state
         nearby (for [{[p] :state } boids
@@ -27,10 +38,12 @@
         alignment-acceleration av
         cohesion-acceleration (vec/scale (vec/sub ap pos) 8) ;Cohesion factor
         wander-acceleration (rules/wander vel (behaviors :wander))
+        ;wall-acceleration (wall-avoidance pos world)
         forces (map +
                     separation-acceleration
                     alignment-acceleration
                     cohesion-acceleration
+                    ;wall-acceleration
                     wander-acceleration)
         vprime (vec/add vel (map #(* % dt) forces))
         vmag (vec/mag vprime)

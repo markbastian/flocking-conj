@@ -18,10 +18,4 @@
 (defn gen-wander []
   { :wander-direction (* 2 Math/PI (Math/random))
    :wander-rate (Math/random)
-   :wander-strength (Math/random) })
-
-(defn find-nearest [boid boids]
-  )
-
-(defn gen-flock []
-  { :avoidance-range 1.0 })
+   :wander-strength (* 5 (Math/random)) })
