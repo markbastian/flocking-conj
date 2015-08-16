@@ -6,16 +6,27 @@
     [flocking.rules :as rules]
     [flocking.quil-renderer :as qr]))
 
-(def dim 20)
+(defn rand-range [lo hi]
+  (+ lo (* (- hi lo) (Math/random))))
+
+(defn gen-state [{:keys [minx maxx miny maxy]}]
+  [[(rand-range minx maxx) (rand-range miny maxy)] [0 0]])
+
 (defn setup [num-boids]
   (q/smooth)
   (q/frame-rate 30)
-  {:world { :minx (- dim) :maxx dim :miny (- dim) :maxy dim }
-   :boids (for [_ (range num-boids)]
-            {:width 0.6
-             :height 1.0
-             :state [[(- (* 2 dim (Math/random)) dim) (- (* 2 dim (Math/random)) dim)] [0 0]]
-             :behaviors { :wander (rules/gen-wander) }})})
+  (let [dim 20
+        world { :minx (- dim) :maxx dim :miny (- dim) :maxy dim }]
+    {:world world
+     :boids (for [_ (range num-boids)]
+              {:width 0.6
+               :height 1.0
+               :color [0 255 0]
+               :state (gen-state world)
+               :behaviors { :wander (rules/gen-wander)
+                           :separation { :range 4 :strength 5 }
+                           :alignment { :strength 1 }
+                           :cohesion { :strength 8 }}})}))
 
 (defn launch-sketch [{:keys[width height host num-boids]}]
   (q/sketch

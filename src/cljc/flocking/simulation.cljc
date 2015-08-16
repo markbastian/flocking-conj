@@ -30,20 +30,14 @@
 
 (defn sim-boid [{:keys [state behaviors] :as boid-state } boids dt world ap av]
   (let [[pos vel] state
-        nearby (for [{[p] :state } boids
-                     :let [dp (vec/sub pos p) m (vec/mag dp)]
-                     :when (<= 0 m 4.0) ]
-                 (if (zero? m) pos (vec/scale dp (/ 5 m m)))) ;separation factor
-        separation-acceleration (apply mapv + nearby)
-        alignment-acceleration av
-        cohesion-acceleration (vec/scale (vec/sub ap pos) 8) ;Cohesion factor
-        wander-acceleration (rules/wander vel (behaviors :wander))
-        ;wall-acceleration (wall-avoidance pos world)
+        separation-acceleration (rules/separate state (:separation behaviors) boids)
+        alignment-acceleration (rules/align state (:alignment behaviors) av)
+        cohesion-acceleration (rules/cohere state (:cohesion behaviors) ap)
+        wander-acceleration (rules/wander state (:wander behaviors))
         forces (map +
                     separation-acceleration
                     alignment-acceleration
                     cohesion-acceleration
-                    ;wall-acceleration
                     wander-acceleration)
         vprime (vec/add vel (map #(* % dt) forces))
         vmag (vec/mag vprime)
@@ -66,7 +60,8 @@
   (let [t (.getTime #?(:clj (java.util.Date.) :cljs (js/Date.)))
         dt (* (- t (or time t)) 1E-3)
         [ap av] (averages s)
-        new-boids (for [boid boids] (sim-boid boid boids dt world ap av))]
+        new-boids (for [boid boids]
+                    (sim-boid boid boids dt world ap av))]
     (-> s
         (into { :time t })
         (into { :boids new-boids }))))

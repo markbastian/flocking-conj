@@ -3,7 +3,7 @@
 
 (defn draw-boid [{[pos [vx vy]] :state
                   { {:keys [wander-direction wander-strength wander-rate]} :wander } :behaviors
-                  :keys [width height]}]
+                  :keys [width height color]}]
   (let [tw (* 0.5 width) th (* 0.5 height)]
     (q/with-translation
       pos
@@ -32,7 +32,7 @@
         (q/with-rotation
           [(q/radians -90)]
           (q/no-fill)
-          (q/stroke 0 255 0)
+          (apply q/stroke color)
           (q/triangle (- tw) (- th) 0 th tw (- th)))))))
 
 (defn draw [{:keys [world boids]}]
