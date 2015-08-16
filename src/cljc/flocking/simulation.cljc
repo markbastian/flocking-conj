@@ -28,7 +28,7 @@
         (wall-force pos [x miny])
         (wall-force pos [x maxy])))
 
-(defn sim-boid [{:keys [state behaviors] :as boid-state } boids dt world ap av]
+(defn sim-boid [{:keys [state max-speed behaviors] :as boid-state } boids dt world ap av]
   (let [[pos vel] state
         separation-acceleration (rules/separate state (:separation behaviors) boids)
         alignment-acceleration (rules/align state (:alignment behaviors) av)
@@ -41,8 +41,7 @@
                     wander-acceleration)
         vprime (vec/add vel (map #(* % dt) forces))
         vmag (vec/mag vprime)
-        ;5.0 below is the max vel. Consider parameterizing
-        vp (if (zero? vmag) vel (map #(* 5.0 (/ % vmag)) vprime))
+        vp (if (zero? vmag) vel (map #(* max-speed (/ % vmag)) vprime))
         new-states [(vec/add pos (vec/scale vp dt)) vp]]
     (-> boid-state
         (assoc-in [:state] new-states)

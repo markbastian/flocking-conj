@@ -22,11 +22,12 @@
               {:width 0.6
                :height 1.0
                :color [0 255 0]
+               :max-speed 5.0
                :state (gen-state world)
-               :behaviors { :wander (rules/gen-wander)
-                           :separation { :range 4 :strength 5 }
-                           :alignment { :strength 1 }
-                           :cohesion { :strength 8 }}})}))
+               :behaviors { :wander (assoc (rules/gen-wander) :strength 10)
+                           :separation { :range 2 :strength 10 }
+                           :alignment { :strength 10 }
+                           :cohesion { :strength 50 }}})}))
 
 (defn launch-sketch [{:keys[width height host num-boids]}]
   (q/sketch
