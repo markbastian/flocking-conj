@@ -2176,7 +2176,7 @@ g.call = function() {
     a = this;
     return a.g.o ? a.g.o() : a.g.call(null);
   }
-  var D = null, D = function(D, fa, na, ia, va, Ba, Ea, La, Qa, Xa, cb, lb, tb, Hb, Ob, hc, vc, Zc, Sd, Ae, Xf, Eh) {
+  var D = null, D = function(D, fa, na, ia, va, Ba, Ea, La, Qa, Xa, cb, lb, tb, Hb, Ob, hc, vc, Zc, Sd, Ae, Xf, Fh) {
     switch(arguments.length) {
       case 1:
         return Pb.call(this, D);
@@ -2221,7 +2221,7 @@ g.call = function() {
       case 21:
         return b.call(this, D, fa, na, ia, va, Ba, Ea, La, Qa, Xa, cb, lb, tb, Hb, Ob, hc, vc, Zc, Sd, Ae, Xf);
       case 22:
-        return a.call(this, D, fa, na, ia, va, Ba, Ea, La, Qa, Xa, cb, lb, tb, Hb, Ob, hc, vc, Zc, Sd, Ae, Xf, Eh);
+        return a.call(this, D, fa, na, ia, va, Ba, Ea, La, Qa, Xa, cb, lb, tb, Hb, Ob, hc, vc, Zc, Sd, Ae, Xf, Fh);
     }
     throw Error("Invalid arity: " + arguments.length);
   };
@@ -3469,8 +3469,8 @@ var Ud = function Ud() {
     return Error("Unsupported operation");
   }, ta.sc = function() {
     return new U(null, 2, 5, V, [Gc(Vd, new q(null, 1, [Wd, vd(Xd, vd(Lc))], null)), Yd], null);
-  }, ta.Lb = !0, ta.ob = "cljs.core/t_cljs$core10754", ta.ec = function(b) {
-    return F(b, "cljs.core/t_cljs$core10754");
+  }, ta.Lb = !0, ta.ob = "cljs.core/t_cljs$core10772", ta.ec = function(b) {
+    return F(b, "cljs.core/t_cljs$core10772");
   });
   return new ta(Ud, Zd);
 };
@@ -7095,61 +7095,61 @@ U.prototype.Ua = function(a, b) {
   }
   throw Error([z("Cannot compare "), z(this), z(" to "), z(b)].join(""));
 };
-var ng = new T(null, "y", "y", -1757859776), og = new T(null, "key-code", "key-code", -1732114304), Yd = new gc(null, "meta10755", "meta10755", 82249248, null), pg = new T(null, "shift", "shift", 997140064), qg = new T(null, "features", "features", -1146962336), rg = new T(null, "disable-stroke-perspective", "disable-stroke-perspective", 479198433), sg = new T(null, "down", "down", 1565245570), tg = new T(null, "enable-retina-pixels", "enable-retina-pixels", 1018316034), ug = new T(null, "disable-depth-mask", 
-"disable-depth-mask", 3298562), vg = new T(null, "p-y", "p-y", -530704830), wg = new T(null, "boids", "boids", 2106521410), xg = new T(null, "burn", "burn", -458179293), yg = new T(null, "key-typed", "key-typed", -876037597), zg = new T(null, "mouse-clicked", "mouse-clicked", -199339421), Ag = new T(null, "mouse-released", "mouse-released", -664480061), Bg = new T(null, "fn", "fn", -1175266204), Cg = new T(null, "f8", "f8", -2141475484), Fa = new T(null, "meta", "meta", 1499536964), Dg = new T(null, 
-"screen", "screen", 1990059748), Eg = new T(null, "enable-depth-test", "enable-depth-test", 1519326084), Fg = new T(null, "mouse-exited", "mouse-exited", -483205244), Gg = new T(null, "enable-depth-sort", "enable-depth-sort", -383089627), Hg = new T(null, "f1", "f1", 1714532389), Ga = new T(null, "dup", "dup", 556298533), Ig = new T(null, "java2d", "java2d", 166099237), Jg = new T(null, "disable-texture-mipmaps", "disable-texture-mipmaps", 1697917541), Kg = new T(null, "key", "key", -1516042587), 
-Lg = new T(null, "darkest", "darkest", 68197253), Mg = new T(null, "f10", "f10", 627525541), Ng = new T(null, "dodge", "dodge", -1556666427), Og = new T(null, "on-close", "on-close", -761178394), Pg = new T(null, "disable-stroke-pure", "disable-stroke-pure", 735493926), Qg = new T(null, "replace", "replace", -786587770), Rg = new T(null, "alt", "alt", -3214426), Sg = new T(null, "button", "button", 1456579943), ke = new gc(null, "new-value", "new-value", -1567397401, null), Tg = new T(null, "mouse-wheel", 
-"mouse-wheel", 1811662439), he = new T(null, "validator", "validator", -1966190681), Ug = new T(null, "disable-depth-test", "disable-depth-test", 284606407), Vg = new T(null, "keyPressed", "keyPressed", 1791025256), Wg = new T(null, "decor", "decor", -1730969431), Xg = new T(null, "wander-strength", "wander-strength", 941925801), Yg = new T(null, "enable-stroke-perspective", "enable-stroke-perspective", -259923319), Zg = new T(null, "maxx", "maxx", 23572233), $g = new T(null, "minx", "minx", 1094774569), 
-ah = new T(null, "opengl", "opengl", -614998103), bh = new T(null, "time", "time", 1385887882), ch = new T(null, "mouse-moved", "mouse-moved", -1918152310), dh = new T(null, "safe-draw-fn", "safe-draw-fn", 1454900202), eh = new T(null, "width", "width", -384071477), fh = new T(null, "enable-native-fonts", "enable-native-fonts", -1989072693), gh = new T(null, "mouseOut", "mouseOut", -386669045), hh = new T(null, "f5", "f5", 1587057387), ih = new T(null, "command", "command", -894540724), jh = new T(null, 
-"mouseScrolled", "mouseScrolled", 31878252), mg = new T(null, "val", "val", 128701612), kh = new T(null, "update", "update", 1045576396), je = new gc(null, "validate", "validate", 1439230700, null), lh = new T(null, "state", "state", -1988618099), mh = new T(null, "behaviors", "behaviors", 120724909), jg = new T(null, "fallback-impl", "fallback-impl", -1501286995), Ca = new T(null, "flush-on-newline", "flush-on-newline", -151457939), nh = new T(null, "mouseDragged", "mouseDragged", 129975181), oh = 
-new T(null, "up", "up", -269712113), ph = new T(null, "renderer", "renderer", 336841071), qh = new T(null, "size", "size", 1098693007), rh = new T(null, "title", "title", 636505583), sh = new T(null, "center", "center", -748944368), th = new T(null, "setup", "setup", 1987730512), uh = new T(null, "mouse-pressed", "mouse-pressed", 736955536), vh = new T(null, "middleware", "middleware", 1462115504), wh = new T(null, "disable-optimized-stroke", "disable-optimized-stroke", 74038544), xh = new T(null, 
-"focus-gained", "focus-gained", -857086384), Da = new T(null, "readably", "readably", 1129599760), yh = new T(null, "global-key-events", "global-key-events", 335064944), bg = new T(null, "more-marker", "more-marker", -14717935), zh = new T(null, "world", "world", -418292623), Ah = new T(null, "f11", "f11", -1417398799), Bh = new T(null, "host", "host", -1558485167), Ch = new T(null, "wander", "wander", 1245626610), Dh = new T(null, "overlay", "overlay", -139131598), Fh = new T(null, "mouse-entered", 
-"mouse-entered", 811350322), Gh = new T(null, "enable-opengl-errors", "enable-opengl-errors", 89998962), Hh = new T(null, "enable-stroke-pure", "enable-stroke-pure", 881345587), Ih = new T(null, "no-safe-draw", "no-safe-draw", -1157778157), Jh = new T(null, "focus-lost", "focus-lost", -554849613), Kh = new T(null, "f3", "f3", 1954829043), Lh = new T(null, "enable-depth-mask", "enable-depth-mask", 872785875), Mh = new T(null, "key-pressed", "key-pressed", -757100364), Nh = new T(null, "key-released", 
-"key-released", 215919828), Ha = new T(null, "print-length", "print-length", 1931866356), Oh = new T(null, "f2", "f2", 396168596), Ph = new T(null, "keyReleased", "keyReleased", 541714964), Qh = new T(null, "control", "control", 1892578036), Rh = new T(null, "difference", "difference", 1916101396), Sh = new T(null, "mouseClicked", "mouseClicked", 1764302965), Th = new T(null, "enable-optimized-stroke", "enable-optimized-stroke", 1537575253), Uh = new T(null, "p-x", "p-x", -1721211211), Vh = new T(null, 
-"p2d", "p2d", -2106175755), Wh = new T(null, "mouseReleased", "mouseReleased", 1116234838), Xh = new T(null, "mousePressed", "mousePressed", 1776186454), Yh = new T(null, "mouseMoved", "mouseMoved", -1936954058), Zh = new T(null, "f12", "f12", 853352790), $h = new T(null, "mouseOver", "mouseOver", -1334461930), ai = new T(null, "exclusion", "exclusion", 531897910), bi = new T(null, "disable-opengl-errors", "disable-opengl-errors", 506822839), ci = new T(null, "unknown-key", "unknown-key", 255305911), 
-di = new T(null, "right", "right", -452581833), ei = new T(null, "host-id", "host-id", 742376279), fi = new T(null, "hard-light", "hard-light", -37591145), gi = new T(null, "disable-retina-pixels", "disable-retina-pixels", -2049264713), hi = new T(null, "keyTyped", "keyTyped", 1437329399), ii = new T(null, "multiply", "multiply", -1036907048), ji = new T(null, "lightest", "lightest", -2043115912), ki = new T(null, "f7", "f7", 356150168), li = new T(null, "x", "x", 2099068185), mi = new T(null, "blend", 
-"blend", 249565561), ni = new T(null, "disable-depth-sort", "disable-depth-sort", -1568352839), oi = new T(null, "raw-key", "raw-key", -162482279), pi = new T(null, "target", "target", 253001721), Xd = new gc(null, "quote", "quote", 1377916282, null), qi = new T(null, "f9", "f9", 704633338), ri = new T(null, "maxy", "maxy", 726027898), si = new T(null, "draw", "draw", 1358331674), Wd = new T(null, "arglists", "arglists", 1661989754), Vd = new gc(null, "nil-iter", "nil-iter", 1101030523, null), ti = 
-new T(null, "add", "add", 235287739), ui = new T(null, "wander-rate", "wander-rate", -1437152069), vi = new T(null, "soft-light", "soft-light", 513207899), ig = new T(null, "alt-impl", "alt-impl", 670969595), wi = new T(null, "subtract", "subtract", 2136988635), ue = new T(null, "wander-direction", "wander-direction", 1481156668), xi = new T(null, "f6", "f6", 2103080604), yi = new T(null, "f4", "f4", 990968764), zi = new T(null, "miny", "miny", -1513078883), Ai = new T(null, "p3d", "p3d", -850380194), 
-Bi = new T(null, "height", "height", 1025178622), Ci = new T(null, "mouse-dragged", "mouse-dragged", -1220073441), Di = new T(null, "left", "left", -399115937), Ei = new T(null, "enable-texture-mipmaps", "enable-texture-mipmaps", 1241892671), Fi = new T(null, "disable-native-fonts", "disable-native-fonts", -931436705);
-function Gi(a, b) {
+var ng = new T(null, "y", "y", -1757859776), og = new T(null, "key-code", "key-code", -1732114304), pg = new T(null, "shift", "shift", 997140064), qg = new T(null, "features", "features", -1146962336), rg = new T(null, "disable-stroke-perspective", "disable-stroke-perspective", 479198433), sg = new T(null, "down", "down", 1565245570), tg = new T(null, "enable-retina-pixels", "enable-retina-pixels", 1018316034), ug = new T(null, "disable-depth-mask", "disable-depth-mask", 3298562), vg = new T(null, 
+"p-y", "p-y", -530704830), wg = new T(null, "boids", "boids", 2106521410), xg = new T(null, "burn", "burn", -458179293), yg = new T(null, "key-typed", "key-typed", -876037597), zg = new T(null, "mouse-clicked", "mouse-clicked", -199339421), Ag = new T(null, "mouse-released", "mouse-released", -664480061), Bg = new T(null, "fn", "fn", -1175266204), Cg = new T(null, "f8", "f8", -2141475484), Fa = new T(null, "meta", "meta", 1499536964), Dg = new T(null, "screen", "screen", 1990059748), Eg = new T(null, 
+"enable-depth-test", "enable-depth-test", 1519326084), Fg = new T(null, "mouse-exited", "mouse-exited", -483205244), Gg = new T(null, "enable-depth-sort", "enable-depth-sort", -383089627), Hg = new T(null, "f1", "f1", 1714532389), Ga = new T(null, "dup", "dup", 556298533), Ig = new T(null, "java2d", "java2d", 166099237), Jg = new T(null, "disable-texture-mipmaps", "disable-texture-mipmaps", 1697917541), Kg = new T(null, "key", "key", -1516042587), Lg = new T(null, "darkest", "darkest", 68197253), 
+Mg = new T(null, "f10", "f10", 627525541), Ng = new T(null, "dodge", "dodge", -1556666427), Og = new T(null, "on-close", "on-close", -761178394), Pg = new T(null, "disable-stroke-pure", "disable-stroke-pure", 735493926), Qg = new T(null, "replace", "replace", -786587770), Rg = new T(null, "alt", "alt", -3214426), Sg = new T(null, "button", "button", 1456579943), ke = new gc(null, "new-value", "new-value", -1567397401, null), Tg = new T(null, "mouse-wheel", "mouse-wheel", 1811662439), he = new T(null, 
+"validator", "validator", -1966190681), Ug = new T(null, "disable-depth-test", "disable-depth-test", 284606407), Vg = new T(null, "keyPressed", "keyPressed", 1791025256), Wg = new T(null, "decor", "decor", -1730969431), Xg = new T(null, "wander-strength", "wander-strength", 941925801), Yg = new T(null, "enable-stroke-perspective", "enable-stroke-perspective", -259923319), Zg = new T(null, "maxx", "maxx", 23572233), $g = new T(null, "minx", "minx", 1094774569), ah = new T(null, "opengl", "opengl", 
+-614998103), bh = new T(null, "time", "time", 1385887882), ch = new T(null, "mouse-moved", "mouse-moved", -1918152310), dh = new T(null, "safe-draw-fn", "safe-draw-fn", 1454900202), eh = new T(null, "width", "width", -384071477), fh = new T(null, "enable-native-fonts", "enable-native-fonts", -1989072693), gh = new T(null, "mouseOut", "mouseOut", -386669045), hh = new T(null, "f5", "f5", 1587057387), ih = new T(null, "command", "command", -894540724), jh = new T(null, "mouseScrolled", "mouseScrolled", 
+31878252), mg = new T(null, "val", "val", 128701612), kh = new T(null, "update", "update", 1045576396), je = new gc(null, "validate", "validate", 1439230700, null), lh = new T(null, "state", "state", -1988618099), mh = new T(null, "behaviors", "behaviors", 120724909), jg = new T(null, "fallback-impl", "fallback-impl", -1501286995), Ca = new T(null, "flush-on-newline", "flush-on-newline", -151457939), nh = new T(null, "mouseDragged", "mouseDragged", 129975181), oh = new T(null, "up", "up", -269712113), 
+ph = new T(null, "renderer", "renderer", 336841071), qh = new T(null, "size", "size", 1098693007), rh = new T(null, "title", "title", 636505583), sh = new T(null, "center", "center", -748944368), th = new T(null, "setup", "setup", 1987730512), uh = new T(null, "mouse-pressed", "mouse-pressed", 736955536), vh = new T(null, "middleware", "middleware", 1462115504), wh = new T(null, "disable-optimized-stroke", "disable-optimized-stroke", 74038544), xh = new T(null, "focus-gained", "focus-gained", -857086384), 
+Da = new T(null, "readably", "readably", 1129599760), yh = new T(null, "global-key-events", "global-key-events", 335064944), bg = new T(null, "more-marker", "more-marker", -14717935), zh = new T(null, "world", "world", -418292623), Ah = new T(null, "f11", "f11", -1417398799), Bh = new T(null, "host", "host", -1558485167), Ch = new T(null, "wander", "wander", 1245626610), Dh = new T(null, "overlay", "overlay", -139131598), Eh = new T(null, "mouse-entered", "mouse-entered", 811350322), Gh = new T(null, 
+"enable-opengl-errors", "enable-opengl-errors", 89998962), Hh = new T(null, "enable-stroke-pure", "enable-stroke-pure", 881345587), Ih = new T(null, "no-safe-draw", "no-safe-draw", -1157778157), Jh = new T(null, "focus-lost", "focus-lost", -554849613), Kh = new T(null, "f3", "f3", 1954829043), Lh = new T(null, "enable-depth-mask", "enable-depth-mask", 872785875), Mh = new T(null, "key-pressed", "key-pressed", -757100364), Nh = new T(null, "key-released", "key-released", 215919828), Ha = new T(null, 
+"print-length", "print-length", 1931866356), Oh = new T(null, "f2", "f2", 396168596), Ph = new T(null, "keyReleased", "keyReleased", 541714964), Qh = new T(null, "control", "control", 1892578036), Rh = new T(null, "difference", "difference", 1916101396), Sh = new T(null, "mouseClicked", "mouseClicked", 1764302965), Th = new T(null, "enable-optimized-stroke", "enable-optimized-stroke", 1537575253), Uh = new T(null, "p-x", "p-x", -1721211211), Vh = new T(null, "p2d", "p2d", -2106175755), Wh = new T(null, 
+"mouseReleased", "mouseReleased", 1116234838), Xh = new T(null, "mousePressed", "mousePressed", 1776186454), Yh = new T(null, "mouseMoved", "mouseMoved", -1936954058), Zh = new T(null, "f12", "f12", 853352790), $h = new T(null, "mouseOver", "mouseOver", -1334461930), ai = new T(null, "exclusion", "exclusion", 531897910), bi = new T(null, "disable-opengl-errors", "disable-opengl-errors", 506822839), ci = new T(null, "unknown-key", "unknown-key", 255305911), di = new T(null, "right", "right", -452581833), 
+ei = new T(null, "host-id", "host-id", 742376279), fi = new T(null, "hard-light", "hard-light", -37591145), gi = new T(null, "disable-retina-pixels", "disable-retina-pixels", -2049264713), hi = new T(null, "keyTyped", "keyTyped", 1437329399), ii = new T(null, "multiply", "multiply", -1036907048), ji = new T(null, "lightest", "lightest", -2043115912), ki = new T(null, "f7", "f7", 356150168), li = new T(null, "x", "x", 2099068185), mi = new T(null, "num-boids", "num-boids", -1439144615), ni = new T(null, 
+"blend", "blend", 249565561), oi = new T(null, "disable-depth-sort", "disable-depth-sort", -1568352839), pi = new T(null, "raw-key", "raw-key", -162482279), qi = new T(null, "target", "target", 253001721), Xd = new gc(null, "quote", "quote", 1377916282, null), ri = new T(null, "f9", "f9", 704633338), si = new T(null, "maxy", "maxy", 726027898), ti = new T(null, "draw", "draw", 1358331674), Wd = new T(null, "arglists", "arglists", 1661989754), Vd = new gc(null, "nil-iter", "nil-iter", 1101030523, 
+null), ui = new T(null, "add", "add", 235287739), vi = new T(null, "wander-rate", "wander-rate", -1437152069), wi = new T(null, "soft-light", "soft-light", 513207899), ig = new T(null, "alt-impl", "alt-impl", 670969595), Yd = new gc(null, "meta10773", "meta10773", 719515579, null), xi = new T(null, "subtract", "subtract", 2136988635), ue = new T(null, "wander-direction", "wander-direction", 1481156668), yi = new T(null, "f6", "f6", 2103080604), zi = new T(null, "f4", "f4", 990968764), Ai = new T(null, 
+"miny", "miny", -1513078883), Bi = new T(null, "p3d", "p3d", -850380194), Ci = new T(null, "height", "height", 1025178622), Di = new T(null, "mouse-dragged", "mouse-dragged", -1220073441), Ei = new T(null, "left", "left", -399115937), Fi = new T(null, "enable-texture-mipmaps", "enable-texture-mipmaps", 1241892671), Gi = new T(null, "disable-native-fonts", "disable-native-fonts", -931436705);
+function Hi(a, b) {
   return qe.f(md, a, b);
 }
-function Hi(a, b) {
+function Ii(a, b) {
   return qe.a(function(a) {
     return b * a;
   }, a);
 }
-function Ii(a) {
+function Ji(a) {
   a = kd(md, W.f(od, a, a));
   return Math.sqrt(a);
 }
-;function Ji(a) {
-  var b = null != a && (a.h & 64 || a.Z) ? Od(ge, a) : a, c = G(b, ui);
+;function Ki(a) {
+  var b = null != a && (a.h & 64 || a.Z) ? Od(ge, a) : a, c = G(b, vi);
   return te(b, function(a, b, c, h) {
     return function(a) {
       return a + (1 * Math.random() - .5) * h;
     };
   }(a, b, b, c));
 }
-function Ki(a, b) {
+function Li(a, b) {
   return $f(function(b) {
     return a * Math.cos(b);
   }, function(b) {
     return a * Math.sin(b);
   }).call(null, b);
 }
-function Li(a, b) {
-  var c = null != b && (b.h & 64 || b.Z) ? Od(ge, b) : b, d = G(c, ue), e = G(c, Xg), f = Ii(a), c = 0 === f ? a : W.a(function(a) {
+function Mi(a, b) {
+  var c = null != b && (b.h & 64 || b.Z) ? Od(ge, b) : b, d = G(c, ue), e = G(c, Xg), f = Ji(a), c = 0 === f ? a : W.a(function(a) {
     return function(b) {
       return Math.sqrt(2) * (b / a);
     };
-  }(f, b, c, d, e), a), d = Ki(e, d);
-  return Gi(c, d);
+  }(f, b, c, d, e), a), d = Li(e, d);
+  return Hi(c, d);
 }
-function Mi() {
-  return new q(null, 3, [ue, 2 * Math.PI * Math.random(), ui, Math.random(), Xg, Math.random()], null);
+function Ni() {
+  return new q(null, 3, [ue, 2 * Math.PI * Math.random(), vi, Math.random(), Xg, 5 * Math.random()], null);
 }
-;function Ni(a, b, c) {
+;function Oi(a, b, c) {
   for (var d = c - b;;) {
     if (a < b) {
       a += d;
@@ -7162,19 +7162,19 @@ function Mi() {
     }
   }
 }
-function Oi(a, b) {
-  var c = null != b && (b.h & 64 || b.Z) ? Od(ge, b) : b, d = G(c, $g), e = G(c, Zg), f = G(c, zi), h = G(c, ri);
+function Pi(a, b) {
+  var c = null != b && (b.h & 64 || b.Z) ? Od(ge, b) : b, d = G(c, $g), e = G(c, Zg), f = G(c, Ai), h = G(c, si);
   return se.f(se.f(a, new U(null, 3, 5, V, [lh, 0, 0], null), function(a, b, c, d) {
     return function(a) {
-      return Ni(a, c, d);
+      return Oi(a, c, d);
     };
   }(b, c, d, e, f, h)), new U(null, 3, 5, V, [lh, 0, 1], null), function(a, b, c, d, e, f) {
     return function(a) {
-      return Ni(a, e, f);
+      return Oi(a, e, f);
     };
   }(b, c, d, e, f, h));
 }
-function Pi(a, b, c, d, e, f) {
+function Qi(a, b, c, d, e, f) {
   var h = null != a && (a.h & 64 || a.Z) ? Od(ge, a) : a, k = G(h, lh), l = G(h, mh), m = R(k, 0), n = R(k, 1), r = function() {
     return function(a, b, c, d, e, f, h, k) {
       return function ia(l) {
@@ -7187,8 +7187,8 @@ function Pi(a, b, c, d, e, f) {
                   a: {
                     for (var f = 0;;) {
                       if (f < d) {
-                        var h = B.a(c, f), h = null != h && (h.h & 64 || h.Z) ? Od(ge, h) : h, h = G(h, lh), h = R(h, 0), h = qe.f(nd, b, h), k = Ii(h);
-                        0 <= k && 4 >= k && (h = 0 === k ? b : Hi(h, 5 / k / k), e.add(h));
+                        var h = B.a(c, f), h = null != h && (h.h & 64 || h.Z) ? Od(ge, h) : h, h = G(h, lh), h = R(h, 0), h = qe.f(nd, b, h), k = Ji(h);
+                        0 <= k && 4 >= k && (h = 0 === k ? b : Ii(h, 5 / k / k), e.add(h));
                         f += 1;
                       } else {
                         c = !0;
@@ -7203,9 +7203,9 @@ function Pi(a, b, c, d, e, f) {
                 e = G(e, lh);
                 e = R(e, 0);
                 e = qe.f(nd, b, e);
-                c = Ii(e);
+                c = Ji(e);
                 if (0 <= c && 4 >= c) {
-                  return P(0 === c ? b : Hi(e, 5 / c / c), ia(kc(a)));
+                  return P(0 === c ? b : Ii(e, 5 / c / c), ia(kc(a)));
                 }
                 a = kc(a);
               } else {
@@ -7217,25 +7217,25 @@ function Pi(a, b, c, d, e, f) {
       };
     }(k, m, n, a, h, h, k, l)(b);
   }(), t = Pd(qe, md, r);
-  e = Hi(qe.f(nd, e, m), 8);
-  var w = Li(n, l.b ? l.b(Ch) : l.call(null, Ch)), y = W.l(md, t, f, e, Fc([w], 0)), A = Gi(n, W.a(function() {
+  e = Ii(qe.f(nd, e, m), 8);
+  var w = Mi(n, l.b ? l.b(Ch) : l.call(null, Ch)), y = W.l(md, t, f, e, Fc([w], 0)), A = Hi(n, W.a(function() {
     return function(a) {
       return a * c;
     };
-  }(k, m, n, r, t, f, e, w, y, a, h, h, k, l), y)), C = Ii(A);
+  }(k, m, n, r, t, f, e, w, y, a, h, h, k, l), y)), C = Ji(A);
   f = 0 === C ? n : W.a(function(a, b, c, d, e, f, h, k, l, m, n) {
     return function(a) {
       return a / n * 5;
     };
   }(k, m, n, r, t, f, e, w, y, A, C, a, h, h, k, l), A);
-  f = new U(null, 2, 5, V, [Gi(m, Hi(f, c)), f], null);
-  return Oi(se.f(re(h, new U(null, 1, 5, V, [lh], null), f), new U(null, 2, 5, V, [mh, Ch], null), Ji), d);
+  f = new U(null, 2, 5, V, [Hi(m, Ii(f, c)), f], null);
+  return Pi(se.f(re(h, new U(null, 1, 5, V, [lh], null), f), new U(null, 2, 5, V, [mh, Ch], null), Ki), d);
 }
-function Qi(a) {
+function Ri(a) {
   var b = null != a && (a.h & 64 || a.Z) ? Od(ge, a) : a, c = G(b, wg);
   return qe.a(function(a, b, c) {
     return function(a) {
-      return Hi(a, 1 / Q(c));
+      return Ii(a, 1 / Q(c));
     };
   }(a, b, c), W.a(function() {
     return function(a) {
@@ -7243,8 +7243,8 @@ function Qi(a) {
     };
   }(a, b, c), Pd(W, Ne, W.a(lh, c))));
 }
-function Ri(a) {
-  var b = null != a && (a.h & 64 || a.Z) ? Od(ge, a) : a, c = G(b, bh), d = G(b, wg), e = G(b, zh), f = (new Date).getTime(), h = .001 * (f - (u(c) ? c : f)), k = Qi(b), l = R(k, 0), m = R(k, 1), n = function() {
+function Si(a) {
+  var b = null != a && (a.h & 64 || a.Z) ? Od(ge, a) : a, c = G(b, bh), d = G(b, wg), e = G(b, zh), f = (new Date).getTime(), h = .001 * (f - (u(c) ? c : f)), k = Ri(b), l = R(k, 0), m = R(k, 1), n = function() {
     return function(a, b, c, d, e, f, h, k, l, m, n) {
       return function Wf(fa) {
         return new Ad(null, function(a, b, c, d, e, f, h, k, l, m, n) {
@@ -7257,7 +7257,7 @@ function Ri(a) {
                   a: {
                     for (var k = 0;;) {
                       if (k < f) {
-                        var l = B.a(c, k), l = Pi(l, m, b, n, d, e);
+                        var l = B.a(c, k), l = Qi(l, m, b, n, d, e);
                         h.add(l);
                         k += 1;
                       } else {
@@ -7269,7 +7269,7 @@ function Ri(a) {
                   return c ? Gd(h.$(), Wf(Nb(a))) : Gd(h.$(), null);
                 }
                 h = K(a);
-                return P(Pi(h, m, b, n, d, e), Wf(kc(a)));
+                return P(Qi(h, m, b, n, d, e), Wf(kc(a)));
               }
               return null;
             }
@@ -7280,52 +7280,52 @@ function Ri(a) {
   }();
   return pe(pe(b, new q(null, 1, [bh, f], null)), new q(null, 1, [wg, n], null));
 }
-;var Si;
+;var Ti;
 a: {
-  var Ti = aa.navigator;
-  if (Ti) {
-    var Ui = Ti.userAgent;
-    if (Ui) {
-      Si = Ui;
+  var Ui = aa.navigator;
+  if (Ui) {
+    var Vi = Ui.userAgent;
+    if (Vi) {
+      Ti = Vi;
       break a;
     }
   }
-  Si = "";
+  Ti = "";
 }
-;var Vi = -1 != Si.indexOf("Opera") || -1 != Si.indexOf("OPR"), Wi = -1 != Si.indexOf("Trident") || -1 != Si.indexOf("MSIE"), Xi = -1 != Si.indexOf("Edge"), Yi = -1 != Si.indexOf("Gecko") && !(-1 != Si.toLowerCase().indexOf("webkit") && -1 == Si.indexOf("Edge")) && !(-1 != Si.indexOf("Trident") || -1 != Si.indexOf("MSIE")) && -1 == Si.indexOf("Edge"), Zi = -1 != Si.toLowerCase().indexOf("webkit") && -1 == Si.indexOf("Edge");
-function $i() {
-  var a = Si;
-  if (Yi) {
+;var Wi = -1 != Ti.indexOf("Opera") || -1 != Ti.indexOf("OPR"), Xi = -1 != Ti.indexOf("Trident") || -1 != Ti.indexOf("MSIE"), Yi = -1 != Ti.indexOf("Edge"), Zi = -1 != Ti.indexOf("Gecko") && !(-1 != Ti.toLowerCase().indexOf("webkit") && -1 == Ti.indexOf("Edge")) && !(-1 != Ti.indexOf("Trident") || -1 != Ti.indexOf("MSIE")) && -1 == Ti.indexOf("Edge"), $i = -1 != Ti.toLowerCase().indexOf("webkit") && -1 == Ti.indexOf("Edge");
+function aj() {
+  var a = Ti;
+  if (Zi) {
     return /rv\:([^\);]+)(\)|;)/.exec(a);
   }
-  if (Xi) {
+  if (Yi) {
     return /Edge\/([\d\.]+)/.exec(a);
   }
-  if (Wi) {
+  if (Xi) {
     return /\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);
   }
-  if (Zi) {
+  if ($i) {
     return /WebKit\/(\S+)/.exec(a);
   }
 }
-function aj() {
+function bj() {
   var a = aa.document;
   return a ? a.documentMode : void 0;
 }
-var bj = function() {
-  if (Vi && aa.opera) {
+var cj = function() {
+  if (Wi && aa.opera) {
     var a = aa.opera.version;
     return ca(a) ? a() : a;
   }
-  var a = "", b = $i();
+  var a = "", b = aj();
   b && (a = b ? b[1] : "");
-  return Wi && (b = aj(), b > parseFloat(a)) ? String(b) : a;
-}(), cj = {};
-function dj(a) {
+  return Xi && (b = bj(), b > parseFloat(a)) ? String(b) : a;
+}(), dj = {};
+function ej(a) {
   var b;
-  if (!(b = cj[a])) {
+  if (!(b = dj[a])) {
     b = 0;
-    for (var c = ga(String(bj)).split("."), d = ga(String(a)).split("."), e = Math.max(c.length, d.length), f = 0;0 == b && f < e;f++) {
+    for (var c = ga(String(cj)).split("."), d = ga(String(a)).split("."), e = Math.max(c.length, d.length), f = 0;0 == b && f < e;f++) {
       var h = c[f] || "", k = d[f] || "", l = RegExp("(\\d*)(\\D*)", "g"), m = RegExp("(\\d*)(\\D*)", "g");
       do {
         var n = l.exec(h) || ["", "", ""], r = m.exec(k) || ["", "", ""];
@@ -7335,37 +7335,37 @@ function dj(a) {
         b = ha(0 == n[1].length ? 0 : parseInt(n[1], 10), 0 == r[1].length ? 0 : parseInt(r[1], 10)) || ha(0 == n[2].length, 0 == r[2].length) || ha(n[2], r[2]);
       } while (0 == b);
     }
-    b = cj[a] = 0 <= b;
+    b = dj[a] = 0 <= b;
   }
   return b;
 }
-var ej = aa.document, fj = ej && Wi ? aj() || ("CSS1Compat" == ej.compatMode ? parseInt(bj, 10) : 5) : void 0;
-!Yi && !Wi || Wi && 9 <= fj || Yi && dj("1.9.1");
-Wi && dj("9");
+var fj = aa.document, gj = fj && Xi ? bj() || ("CSS1Compat" == fj.compatMode ? parseInt(cj, 10) : 5) : void 0;
+!Zi && !Xi || Xi && 9 <= gj || Zi && ej("1.9.1");
+Xi && ej("9");
 la("area base br col command embed hr img input keygen link meta param source track wbr".split(" "));
-var gj = !Wi || 9 <= fj, hj = Wi && !dj("9");
-!Zi || dj("528");
-Yi && dj("1.9b") || Wi && dj("8") || Vi && dj("9.5") || Zi && dj("528");
-Yi && !dj("8") || Wi && dj("9");
-function ij(a, b) {
+var hj = !Xi || 9 <= gj, ij = Xi && !ej("9");
+!$i || ej("528");
+Zi && ej("1.9b") || Xi && ej("8") || Wi && ej("9.5") || $i && ej("528");
+Zi && !ej("8") || Xi && ej("9");
+function jj(a, b) {
   this.type = a;
   this.currentTarget = this.target = b;
   this.defaultPrevented = this.Db = !1;
 }
-ij.prototype.stopPropagation = function() {
+jj.prototype.stopPropagation = function() {
   this.Db = !0;
 };
-ij.prototype.preventDefault = function() {
+jj.prototype.preventDefault = function() {
   this.defaultPrevented = !0;
 };
-function jj(a) {
-  jj[" "](a);
+function kj(a) {
+  kj[" "](a);
   return a;
 }
-jj[" "] = function() {
+kj[" "] = function() {
 };
-function kj(a, b) {
-  ij.call(this, a ? a.type : "");
+function lj(a, b) {
+  jj.call(this, a ? a.type : "");
   this.relatedTarget = this.currentTarget = this.target = null;
   this.charCode = this.keyCode = this.button = this.screenY = this.screenX = this.clientY = this.clientX = this.offsetY = this.offsetX = 0;
   this.metaKey = this.shiftKey = this.altKey = this.ctrlKey = !1;
@@ -7376,11 +7376,11 @@ function kj(a, b) {
     this.currentTarget = b;
     var d = a.relatedTarget;
     if (d) {
-      if (Yi) {
+      if (Zi) {
         var e;
         a: {
           try {
-            jj(d.nodeName);
+            kj(d.nodeName);
             e = !0;
             break a;
           } catch (f) {
@@ -7393,8 +7393,8 @@ function kj(a, b) {
       "mouseover" == c ? d = a.fromElement : "mouseout" == c && (d = a.toElement);
     }
     this.relatedTarget = d;
-    this.offsetX = Zi || void 0 !== a.offsetX ? a.offsetX : a.layerX;
-    this.offsetY = Zi || void 0 !== a.offsetY ? a.offsetY : a.layerY;
+    this.offsetX = $i || void 0 !== a.offsetX ? a.offsetX : a.layerX;
+    this.offsetY = $i || void 0 !== a.offsetY ? a.offsetY : a.layerY;
     this.clientX = void 0 !== a.clientX ? a.clientX : a.pageX;
     this.clientY = void 0 !== a.clientY ? a.clientY : a.pageY;
     this.screenX = a.screenX || 0;
@@ -7414,28 +7414,28 @@ function kj(a, b) {
 (function() {
   function a() {
   }
-  a.prototype = ij.prototype;
-  kj.Ob = ij.prototype;
-  kj.prototype = new a;
-  kj.prototype.constructor = kj;
-  kj.ib = function(a, c, d) {
+  a.prototype = jj.prototype;
+  lj.Ob = jj.prototype;
+  lj.prototype = new a;
+  lj.prototype.constructor = lj;
+  lj.ib = function(a, c, d) {
     for (var e = Array(arguments.length - 2), f = 2;f < arguments.length;f++) {
       e[f - 2] = arguments[f];
     }
-    return ij.prototype[c].apply(a, e);
+    return jj.prototype[c].apply(a, e);
   };
 })();
-kj.prototype.stopPropagation = function() {
-  kj.Ob.stopPropagation.call(this);
+lj.prototype.stopPropagation = function() {
+  lj.Ob.stopPropagation.call(this);
   this.bb.stopPropagation ? this.bb.stopPropagation() : this.bb.cancelBubble = !0;
 };
-kj.prototype.preventDefault = function() {
-  kj.Ob.preventDefault.call(this);
+lj.prototype.preventDefault = function() {
+  lj.Ob.preventDefault.call(this);
   var a = this.bb;
   if (a.preventDefault) {
     a.preventDefault();
   } else {
-    if (a.returnValue = !1, hj) {
+    if (a.returnValue = !1, ij) {
       try {
         if (a.ctrlKey || 112 <= a.keyCode && 123 >= a.keyCode) {
           a.keyCode = -1;
@@ -7445,47 +7445,47 @@ kj.prototype.preventDefault = function() {
     }
   }
 };
-var lj = "closure_listenable_" + (1E6 * Math.random() | 0), mj = 0;
-function nj(a, b, c, d, e) {
+var mj = "closure_listenable_" + (1E6 * Math.random() | 0), nj = 0;
+function oj(a, b, c, d, e) {
   this.listener = a;
   this.pb = null;
   this.src = b;
   this.type = c;
   this.jb = !!d;
   this.Bb = e;
-  this.key = ++mj;
+  this.key = ++nj;
   this.hb = this.sb = !1;
 }
-function oj(a) {
+function pj(a) {
   a.hb = !0;
   a.listener = null;
   a.pb = null;
   a.src = null;
   a.Bb = null;
 }
-;function pj(a) {
+;function qj(a) {
   this.src = a;
   this.na = {};
   this.qb = 0;
 }
-pj.prototype.add = function(a, b, c, d, e) {
+qj.prototype.add = function(a, b, c, d, e) {
   var f = a.toString();
   a = this.na[f];
   a || (a = this.na[f] = [], this.qb++);
-  var h = qj(a, b, d, e);
-  -1 < h ? (b = a[h], c || (b.sb = !1)) : (b = new nj(b, this.src, f, !!d, e), b.sb = c, a.push(b));
+  var h = rj(a, b, d, e);
+  -1 < h ? (b = a[h], c || (b.sb = !1)) : (b = new oj(b, this.src, f, !!d, e), b.sb = c, a.push(b));
   return b;
 };
-pj.prototype.remove = function(a, b, c, d) {
+qj.prototype.remove = function(a, b, c, d) {
   a = a.toString();
   if (!(a in this.na)) {
     return !1;
   }
   var e = this.na[a];
-  b = qj(e, b, c, d);
-  return -1 < b ? (oj(e[b]), oa.splice.call(e, b, 1), 0 == e.length && (delete this.na[a], this.qb--), !0) : !1;
+  b = rj(e, b, c, d);
+  return -1 < b ? (pj(e[b]), oa.splice.call(e, b, 1), 0 == e.length && (delete this.na[a], this.qb--), !0) : !1;
 };
-pj.prototype.hasListener = function(a, b) {
+qj.prototype.hasListener = function(a, b) {
   var c = void 0 !== a, d = c ? a.toString() : "", e = void 0 !== b;
   return ka(this.na, function(a) {
     for (var h = 0;h < a.length;++h) {
@@ -7496,7 +7496,7 @@ pj.prototype.hasListener = function(a, b) {
     return !1;
   });
 };
-function qj(a, b, c, d) {
+function rj(a, b, c, d) {
   for (var e = 0;e < a.length;++e) {
     var f = a[e];
     if (!f.hb && f.listener == b && f.jb == !!c && f.Bb == d) {
@@ -7505,9 +7505,9 @@ function qj(a, b, c, d) {
   }
   return -1;
 }
-;var rj = "closure_lm_" + (1E6 * Math.random() | 0), sj = {}, tj = 0;
-function uj() {
-  var a = vj, b = gj ? function(c) {
+;var sj = "closure_lm_" + (1E6 * Math.random() | 0), tj = {}, uj = 0;
+function vj() {
+  var a = wj, b = hj ? function(c) {
     return a.call(b.src, b.listener, c);
   } : function(c) {
     c = a.call(b.src, b.listener, c);
@@ -7517,23 +7517,23 @@ function uj() {
   };
   return b;
 }
-function wj(a, b, c, d, e) {
+function xj(a, b, c, d, e) {
   if ("array" == p(b)) {
     for (var f = 0;f < b.length;f++) {
-      wj(a, b[f], c, d, e);
+      xj(a, b[f], c, d, e);
     }
   } else {
-    if (c = xj(c), a && a[lj]) {
+    if (c = yj(c), a && a[mj]) {
       a.tc(b, c, d, e);
     } else {
       if (!b) {
         throw Error("Invalid event type");
       }
-      var f = !!d, h = yj(a);
-      h || (a[rj] = h = new pj(a));
+      var f = !!d, h = zj(a);
+      h || (a[sj] = h = new qj(a));
       c = h.add(b, c, !0, d, e);
       if (!c.pb) {
-        d = uj();
+        d = vj();
         c.pb = d;
         d.src = a;
         d.listener = c;
@@ -7541,42 +7541,42 @@ function wj(a, b, c, d, e) {
           a.addEventListener(b.toString(), d, f);
         } else {
           if (a.attachEvent) {
-            a.attachEvent(zj(b.toString()), d);
+            a.attachEvent(Aj(b.toString()), d);
           } else {
             throw Error("addEventListener and attachEvent are unavailable.");
           }
         }
-        tj++;
+        uj++;
       }
     }
   }
 }
-function zj(a) {
-  return a in sj ? sj[a] : sj[a] = "on" + a;
+function Aj(a) {
+  return a in tj ? tj[a] : tj[a] = "on" + a;
 }
-function Aj(a, b, c, d) {
+function Bj(a, b, c, d) {
   var e = !0;
-  if (a = yj(a)) {
+  if (a = zj(a)) {
     if (b = a.na[b.toString()]) {
       for (b = b.concat(), a = 0;a < b.length;a++) {
         var f = b[a];
-        f && f.jb == c && !f.hb && (f = Bj(f, d), e = e && !1 !== f);
+        f && f.jb == c && !f.hb && (f = Cj(f, d), e = e && !1 !== f);
       }
     }
   }
   return e;
 }
-function Bj(a, b) {
+function Cj(a, b) {
   var c = a.listener, d = a.Bb || a.src;
   if (a.sb && "number" != typeof a && a && !a.hb) {
     var e = a.src;
-    if (e && e[lj]) {
+    if (e && e[mj]) {
       e.uc(a);
     } else {
       var f = a.type, h = a.pb;
-      e.removeEventListener ? e.removeEventListener(f, h, a.jb) : e.detachEvent && e.detachEvent(zj(f), h);
-      tj--;
-      if (f = yj(e)) {
+      e.removeEventListener ? e.removeEventListener(f, h, a.jb) : e.detachEvent && e.detachEvent(Aj(f), h);
+      uj--;
+      if (f = zj(e)) {
         var h = a.type, k;
         if (k = h in f.na) {
           k = f.na[h];
@@ -7584,20 +7584,20 @@ function Bj(a, b) {
           (m = 0 <= l) && oa.splice.call(k, l, 1);
           k = m;
         }
-        k && (oj(a), 0 == f.na[h].length && (delete f.na[h], f.qb--));
-        0 == f.qb && (f.src = null, e[rj] = null);
+        k && (pj(a), 0 == f.na[h].length && (delete f.na[h], f.qb--));
+        0 == f.qb && (f.src = null, e[sj] = null);
       } else {
-        oj(a);
+        pj(a);
       }
     }
   }
   return c.call(d, b);
 }
-function vj(a, b) {
+function wj(a, b) {
   if (a.hb) {
     return !0;
   }
-  if (!gj) {
+  if (!hj) {
     var c;
     if (!(c = b)) {
       a: {
@@ -7614,7 +7614,7 @@ function vj(a, b) {
       }
     }
     e = c;
-    c = new kj(e, this);
+    c = new lj(e, this);
     d = !0;
     if (!(0 > e.keyCode || void 0 != e.returnValue)) {
       a: {
@@ -7637,38 +7637,38 @@ function vj(a, b) {
       }
       for (var f = a.type, k = e.length - 1;!c.Db && 0 <= k;k--) {
         c.currentTarget = e[k];
-        var l = Aj(e[k], f, !0, c), d = d && l;
+        var l = Bj(e[k], f, !0, c), d = d && l;
       }
       for (k = 0;!c.Db && k < e.length;k++) {
-        c.currentTarget = e[k], l = Aj(e[k], f, !1, c), d = d && l;
+        c.currentTarget = e[k], l = Bj(e[k], f, !1, c), d = d && l;
       }
     }
     return d;
   }
-  return Bj(a, new kj(b, this));
+  return Cj(a, new lj(b, this));
 }
+function zj(a) {
+  a = a[sj];
+  return a instanceof qj ? a : null;
+}
+var Dj = "__closure_events_fn_" + (1E9 * Math.random() >>> 0);
 function yj(a) {
-  a = a[rj];
-  return a instanceof pj ? a : null;
-}
-var Cj = "__closure_events_fn_" + (1E9 * Math.random() >>> 0);
-function xj(a) {
   if (ca(a)) {
     return a;
   }
-  a[Cj] || (a[Cj] = function(b) {
+  a[Dj] || (a[Dj] = function(b) {
     return a.handleEvent(b);
   });
-  return a[Cj];
+  return a[Dj];
 }
-;var Dj = new q(null, 3, [Wg, new U(null, 2, 5, V, ["2.0", "Try :features [:present] for similar effect"], null), pi, new U(null, 2, 5, V, ["2.0", "Use :features [:keep-on-top] instead."], null), dh, new U(null, 2, 5, V, ["2.0", "Use :features [:no-safe-fns] instead."], null)], null);
-function Ej(a) {
+;var Ej = new q(null, 3, [Wg, new U(null, 2, 5, V, ["2.0", "Try :features [:present] for similar effect"], null), qi, new U(null, 2, 5, V, ["2.0", "Use :features [:keep-on-top] instead."], null), dh, new U(null, 2, 5, V, ["2.0", "Use :features [:no-safe-fns] instead."], null)], null);
+function Fj(a) {
   a = Vf(a);
   u(a.b ? a.b(Ih) : a.call(null, Ih)) && lg(Fc(["Feature :no-safe-draw was renamed to :no-safe-fns in Quil 2.1.", "Use :feature [:no-safe-fns] now."], 0));
   return null == a ? null : ib(a, Ih);
 }
-function Fj(a) {
-  var b = se.f(a, new U(null, 1, 5, V, [qg], null), Ej);
+function Gj(a) {
+  var b = se.f(a, new U(null, 1, 5, V, [qg], null), Fj);
   return pe(Zd, oe(Ia, function() {
     return function(a) {
       return function e(b) {
@@ -7683,7 +7683,7 @@ function Fj(a) {
                     for (var a = 0;;) {
                       if (a < l) {
                         var b = B.a(c, a), e = R(b, 0), f = R(b, 1), b = m;
-                        var h = Dj.b ? Dj.b(e) : Dj.call(null, e);
+                        var h = Ej.b ? Ej.b(e) : Ej.call(null, e);
                         u(h) ? (f = R(h, 0), h = R(h, 1), lg(Fc([e, "option was removed in Quil", f, ".", h], 0)), e = null) : e = new U(null, 2, 5, V, [e, f], null);
                         b.add(e);
                         a += 1;
@@ -7695,7 +7695,7 @@ function Fj(a) {
                 }
                 var n = K(a), r = R(n, 0), t = R(n, 1);
                 return P(function() {
-                  var a = Dj.b ? Dj.b(r) : Dj.call(null, r);
+                  var a = Ej.b ? Ej.b(r) : Ej.call(null, r);
                   if (u(a)) {
                     var b = R(a, 0), a = R(a, 1);
                     lg(Fc([r, "option was removed in Quil", b, ".", a], 0));
@@ -7712,8 +7712,8 @@ function Fj(a) {
     }(b)(b);
   }()));
 }
-;function Gj(a) {
-  var b = Hj;
+;function Hj(a) {
+  var b = Ij;
   if (u(G(b, a))) {
     return G(b, a);
   }
@@ -7746,7 +7746,7 @@ function Fj(a) {
   }
   throw Error([z("Expecting a keyword, got: "), z(a), z(". Expected one of: "), z(Me(gd(ef(b))))].join(""));
 }
-;var Z = null, Hj = new q(null, 4, [Ig, Processing.prototype.PConstants.JAVA2D, Vh, Processing.prototype.PConstants.P2D, Ai, Processing.prototype.PConstants.P3D, ah, Processing.prototype.PConstants.OPENGL], null), Ij = function Ij() {
+;var Z = null, Ij = new q(null, 4, [Ig, Processing.prototype.PConstants.JAVA2D, Vh, Processing.prototype.PConstants.P2D, Bi, Processing.prototype.PConstants.P3D, ah, Processing.prototype.PConstants.OPENGL], null), Jj = function Jj() {
   for (var b = [], c = arguments.length, d = 0;;) {
     if (d < c) {
       b.push(arguments[d]), d += 1;
@@ -7756,22 +7756,22 @@ function Fj(a) {
   }
   switch(b.length) {
     case 2:
-      return Ij.a(arguments[0], arguments[1]);
+      return Jj.a(arguments[0], arguments[1]);
     case 3:
-      return Ij.f(arguments[0], arguments[1], arguments[2]);
+      return Jj.f(arguments[0], arguments[1], arguments[2]);
     default:
       throw Error([z("Invalid arity: "), z(b.length)].join(""));;
   }
 };
-Ij.a = function(a, b) {
+Jj.a = function(a, b) {
   return Z.size(a | 0, b | 0);
 };
-Ij.f = function(a, b, c) {
-  return Z.size(a | 0, b | 0, Gj(c));
+Jj.f = function(a, b, c) {
+  return Z.size(a | 0, b | 0, Hj(c));
 };
-Ij.w = 3;
-function Jj(a, b) {
-  for (var c = I(Oc([Vg, gh, jh, nh, th, Ph, Sh, Wh, Xh, Yh, $h, hi, si], [Mh, Fg, Tg, Ci, th, Nh, zg, Ag, uh, ch, Fh, yg, si])), d = null, e = 0, f = 0;;) {
+Jj.w = 3;
+function Kj(a, b) {
+  for (var c = I(Oc([Vg, gh, jh, nh, th, Ph, Sh, Wh, Xh, Yh, $h, hi, ti], [Mh, Fg, Tg, Di, th, Nh, zg, Ag, uh, ch, Eh, yg, ti])), d = null, e = 0, f = 0;;) {
     if (f < e) {
       var h = d.L(null, f), k = R(h, 0), l = R(h, 1), m = b.b ? b.b(l) : b.call(null, l);
       if (u(m)) {
@@ -7821,17 +7821,17 @@ function Jj(a, b) {
     }
   }
 }
-function Kj(a) {
+function Lj(a) {
   var b = Qf(Fc([new q(null, 1, [qh, new U(null, 2, 5, V, [500, 300], null)], null), function(b) {
     return b.b ? b.b(a) : b.call(null, a);
-  }.call(null, Od(ce, P(Fj, vh.a(a, Lc))))], 0)), c = function() {
+  }.call(null, Od(ce, P(Gj, vh.a(a, Lc))))], 0)), c = function() {
     var a = qh.b(b);
     return u(a) ? a : new U(null, 2, 5, V, [200, 200], null);
   }(), d = ph.b(b), e = Vf(qg.b(b)), f = se.f(se.f(b, new U(null, 1, 5, V, [th], null), function(a, b, c, d) {
     return function(e) {
       return function(a, b, c) {
         return function() {
-          Od(Ij, Kd.a(b, u(c) ? new U(null, 1, 5, V, [c], null) : Lc));
+          Od(Jj, Kd.a(b, u(c) ? new U(null, 1, 5, V, [c], null) : Lc));
           return u(e) ? e.o ? e.o() : e.call(null) : null;
         };
       }(a, b, c, d);
@@ -7847,7 +7847,7 @@ function Kj(a) {
     };
   }(b, c, d, e)), c = new Processing.Sketch(function(a, b, c, d, e) {
     return function(a) {
-      Jj(a, e);
+      Kj(a, e);
       a.gb = fe ? fe(null) : ee.call(null, null);
       return a.ic = fe ? fe(60) : ee.call(null, 60);
     };
@@ -7855,7 +7855,7 @@ function Kj(a) {
   cd(e, yh) && (c.options.globalKeyEvents = !0);
   return c;
 }
-var Lj = function Lj() {
+var Mj = function Mj() {
   for (var b = [], c = arguments.length, d = 0;;) {
     if (d < c) {
       b.push(arguments[d]), d += 1;
@@ -7863,9 +7863,9 @@ var Lj = function Lj() {
       break;
     }
   }
-  return Lj.l(0 < b.length ? new J(b.slice(0), 0) : null);
+  return Mj.l(0 < b.length ? new J(b.slice(0), 0) : null);
 };
-Lj.l = function(a) {
+Mj.l = function(a) {
   var b = Od(ge, a);
   a = function() {
     var a = Bh.b(b), c = document;
@@ -7875,76 +7875,52 @@ Lj.l = function(a) {
     var a = ph.b(b);
     return u(a) ? a : Vh;
   }();
-  return u(a) ? (u(a.Mb) ? N.a(c, a.Mb) || console.warn("WARNING: Using different context on one canvas!") : a.Mb = c, new Processing(a, Kj(b))) : console.warn("WARNING: Cannot create sketch. :host is not specified.");
+  return u(a) ? (u(a.Mb) ? N.a(c, a.Mb) || console.warn("WARNING: Using different context on one canvas!") : a.Mb = c, new Processing(a, Lj(b))) : console.warn("WARNING: Cannot create sketch. :host is not specified.");
 };
-Lj.w = 0;
-Lj.v = function(a) {
-  return Lj.l(I(a));
+Mj.w = 0;
+Mj.v = function(a) {
+  return Mj.l(I(a));
 };
-var Mj = fe ? fe(L) : ee.call(null, L);
-function Nj(a) {
+var Nj = fe ? fe(L) : ee.call(null, L);
+function Oj(a) {
   var b = document.createElement("canvas");
   b.setAttribute("id", a);
   document.body.appendChild(b);
 }
-wj(window, "load", function() {
-  for (var a = 1 >= document.body.childNodes.length, b = I(sc.b ? sc.b(Mj) : sc.call(null, Mj)), c = null, d = 0, e = 0;;) {
+xj(window, "load", function() {
+  for (var a = 1 >= document.body.childNodes.length, b = I(sc.b ? sc.b(Nj) : sc.call(null, Nj)), c = null, d = 0, e = 0;;) {
     if (e < d) {
       var f = c.L(null, e);
-      u(a) && Nj(ei.b(f));
+      u(a) && Oj(ei.b(f));
       Bg.b(f).call(null);
       e += 1;
     } else {
       if (b = I(b)) {
-        c = b, Xc(c) ? (b = Mb(c), d = Nb(c), c = b, f = Q(b), b = d, d = f) : (f = K(c), u(a) && Nj(ei.b(f)), Bg.b(f).call(null), b = M(c), c = null, d = 0), e = 0;
+        c = b, Xc(c) ? (b = Mb(c), d = Nb(c), c = b, f = Q(b), b = d, d = f) : (f = K(c), u(a) && Oj(ei.b(f)), Bg.b(f).call(null), b = M(c), c = null, d = 0), e = 0;
       } else {
         return null;
       }
     }
   }
 });
-function Oj() {
+function Pj() {
   return u(null) ? null : Z;
 }
-Oc([xg, Dg, Lg, Ng, Qg, Dh, Rh, ai, fi, ii, ji, mi, ti, vi, wi], [Processing.prototype.PConstants.BURN, Processing.prototype.PConstants.SCREEN, Processing.prototype.PConstants.DARKEST, Processing.prototype.PConstants.DODGE, Processing.prototype.PConstants.REPLACE, Processing.prototype.PConstants.OVERLAY, Processing.prototype.PConstants.DIFFERENCE, Processing.prototype.PConstants.EXCLUSION, Processing.prototype.PConstants.HARD_LIGHT, Processing.prototype.PConstants.MULTIPLY, Processing.prototype.PConstants.LIGHTEST, 
+Oc([xg, Dg, Lg, Ng, Qg, Dh, Rh, ai, fi, ii, ji, ni, ui, wi, xi], [Processing.prototype.PConstants.BURN, Processing.prototype.PConstants.SCREEN, Processing.prototype.PConstants.DARKEST, Processing.prototype.PConstants.DODGE, Processing.prototype.PConstants.REPLACE, Processing.prototype.PConstants.OVERLAY, Processing.prototype.PConstants.DIFFERENCE, Processing.prototype.PConstants.EXCLUSION, Processing.prototype.PConstants.HARD_LIGHT, Processing.prototype.PConstants.MULTIPLY, Processing.prototype.PConstants.LIGHTEST, 
 Processing.prototype.PConstants.BLEND, Processing.prototype.PConstants.ADD, Processing.prototype.PConstants.SOFT_LIGHT, Processing.prototype.PConstants.SUBTRACT]);
-Oc([rg, tg, ug, Eg, Gg, Jg, Pg, Ug, Yg, fh, wh, Gh, Hh, Lh, Th, bi, gi, ni, Ei, Fi], [Processing.prototype.PConstants.DISABLE_STROKE_PERSPECTIVE, Processing.prototype.PConstants.ENABLE_RETINA_PIXELS, Processing.prototype.PConstants.DISABLE_DEPTH_MASK, Processing.prototype.PConstants.ENABLE_DEPTH_TEST, Processing.prototype.PConstants.ENABLE_DEPTH_SORT, Processing.prototype.PConstants.DISABLE_TEXTURE_MIPMAPS, Processing.prototype.PConstants.DISABLE_STROKE_PURE, Processing.prototype.PConstants.DISABLE_DEPTH_TEST, 
+Oc([rg, tg, ug, Eg, Gg, Jg, Pg, Ug, Yg, fh, wh, Gh, Hh, Lh, Th, bi, gi, oi, Fi, Gi], [Processing.prototype.PConstants.DISABLE_STROKE_PERSPECTIVE, Processing.prototype.PConstants.ENABLE_RETINA_PIXELS, Processing.prototype.PConstants.DISABLE_DEPTH_MASK, Processing.prototype.PConstants.ENABLE_DEPTH_TEST, Processing.prototype.PConstants.ENABLE_DEPTH_SORT, Processing.prototype.PConstants.DISABLE_TEXTURE_MIPMAPS, Processing.prototype.PConstants.DISABLE_STROKE_PURE, Processing.prototype.PConstants.DISABLE_DEPTH_TEST, 
 Processing.prototype.PConstants.ENABLE_STROKE_PERSPECTIVE, Processing.prototype.PConstants.ENABLE_NATIVE_FONTS, Processing.prototype.PConstants.DISABLE_OPTIMIZED_STROKE, Processing.prototype.PConstants.ENABLE_OPENGL_ERRORS, Processing.prototype.PConstants.ENABLE_STROKE_PURE, Processing.prototype.PConstants.ENABLE_DEPTH_MASK, Processing.prototype.PConstants.ENABLE_OPTIMIZED_STROKE, Processing.prototype.PConstants.DISABLE_OPENGL_ERRORS, Processing.prototype.PConstants.DISABLE_RETINA_PIXELS, Processing.prototype.PConstants.DISABLE_DEPTH_SORT, 
 Processing.prototype.PConstants.ENABLE_TEXTURE_MIPMAPS, Processing.prototype.PConstants.DISABLE_NATIVE_FONTS]);
-var Pj = Oc([121, 39, 157, 119, 116, 113, 40, 117, 118, 122, 17, 115, 112, 123, 16, 120, 38, 18, 114, 37], [Mg, di, ih, Cg, hh, Oh, sg, xi, ki, Ah, Qh, yi, Hg, Zh, pg, qi, oh, Rg, Kh, Di]);
-function Qj() {
-  var a = Z.ic;
-  ie.a ? ie.a(a, 100) : ie.call(null, a, 100);
-  Z.frameRate(100);
-}
+var Qj = Oc([121, 39, 157, 119, 116, 113, 40, 117, 118, 122, 17, 115, 112, 123, 16, 120, 38, 18, 114, 37], [Mg, di, ih, Cg, hh, Oh, sg, yi, ki, Ah, Qh, zi, Hg, Zh, pg, ri, oh, Rg, Kh, Ei]);
 function Rj() {
-  var a = Z.mouseButton;
-  return u(N.a ? N.a(37, a) : N.call(null, 37, a)) ? Di : u(N.a ? N.a(39, a) : N.call(null, 39, a)) ? di : u(N.a ? N.a(3, a) : N.call(null, 3, a)) ? sh : null;
+  var a = Z.ic;
+  ie.a ? ie.a(a, 30) : ie.call(null, a, 30);
+  Z.frameRate(30);
 }
-var Sj = function Sj() {
-  for (var b = [], c = arguments.length, d = 0;;) {
-    if (d < c) {
-      b.push(arguments[d]), d += 1;
-    } else {
-      break;
-    }
-  }
-  switch(b.length) {
-    case 1:
-      return Sj.b(arguments[0]);
-    case 4:
-      return Sj.B(arguments[0], arguments[1], arguments[2], arguments[3]);
-    default:
-      throw Error([z("Invalid arity: "), z(b.length)].join(""));;
-  }
-};
-Sj.b = function(a) {
-  return Oj().rotate(a);
-};
-Sj.B = function(a, b, c, d) {
-  return Oj().rotate(a, b, c, d);
-};
-Sj.w = 4;
+function Sj() {
+  var a = Z.mouseButton;
+  return u(N.a ? N.a(37, a) : N.call(null, 37, a)) ? Ei : u(N.a ? N.a(39, a) : N.call(null, 39, a)) ? di : u(N.a ? N.a(3, a) : N.call(null, 3, a)) ? sh : null;
+}
 var Tj = function Tj() {
   for (var b = [], c = arguments.length, d = 0;;) {
     if (d < c) {
@@ -7956,74 +7932,101 @@ var Tj = function Tj() {
   switch(b.length) {
     case 1:
       return Tj.b(arguments[0]);
-    case 2:
-      return Tj.a(arguments[0], arguments[1]);
-    case 3:
-      return Tj.f(arguments[0], arguments[1], arguments[2]);
+    case 4:
+      return Tj.B(arguments[0], arguments[1], arguments[2], arguments[3]);
     default:
       throw Error([z("Invalid arity: "), z(b.length)].join(""));;
   }
 };
 Tj.b = function(a) {
-  return Od(Tj, a);
+  return Pj().rotate(a);
 };
-Tj.a = function(a, b) {
-  return Oj().translate(a, b);
+Tj.B = function(a, b, c, d) {
+  return Pj().rotate(a, b, c, d);
 };
-Tj.f = function(a, b, c) {
-  return Oj().translate(a, b, c);
+Tj.w = 4;
+var Uj = function Uj() {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  switch(b.length) {
+    case 1:
+      return Uj.b(arguments[0]);
+    case 2:
+      return Uj.a(arguments[0], arguments[1]);
+    case 3:
+      return Uj.f(arguments[0], arguments[1], arguments[2]);
+    default:
+      throw Error([z("Invalid arity: "), z(b.length)].join(""));;
+  }
 };
-Tj.w = 3;
-function Uj(a) {
+Uj.b = function(a) {
+  return Od(Uj, a);
+};
+Uj.a = function(a, b) {
+  return Pj().translate(a, b);
+};
+Uj.f = function(a, b, c) {
+  return Pj().translate(a, b, c);
+};
+Uj.w = 3;
+function Vj(a) {
+  return Od(Mj, a);
+}
+;function Wj(a) {
   var b = null != a && (a.h & 64 || a.Z) ? Od(ge, a) : a, c = G(b, lh);
   a = R(c, 0);
   var d = R(c, 1), c = R(d, 0), d = R(d, 1), e = G(b, mh), e = null != e && (e.h & 64 || e.Z) ? Od(ge, e) : e, e = G(e, Ch), e = null != e && (e.h & 64 || e.Z) ? Od(ge, e) : e;
   G(e, ue);
   G(e, Xg);
-  G(e, ui);
+  G(e, vi);
   e = G(b, eh);
-  b = G(b, Bi);
+  b = G(b, Ci);
   e *= .5;
   b *= .5;
-  Oj().pushMatrix();
+  Pj().pushMatrix();
   try {
-    Tj.b(a);
+    Uj.b(a);
     var f = new U(null, 1, 5, V, [Math.atan2(d, c)], null);
-    Oj().pushMatrix();
+    Pj().pushMatrix();
     try {
-      Od(Sj, f);
+      Od(Tj, f);
       var h = new U(null, 1, 5, V, [Z.radians(-90)], null);
-      Oj().pushMatrix();
+      Pj().pushMatrix();
       try {
-        Od(Sj, h), Oj().noFill(), Oj().stroke(0, 255, 0), Oj().triangle(-e, -b, 0, b, e, -b);
+        Od(Tj, h), Pj().noFill(), Pj().stroke(0, 255, 0), Pj().triangle(-e, -b, 0, b, e, -b);
       } finally {
-        Oj().popMatrix();
+        Pj().popMatrix();
       }
     } finally {
-      Oj().popMatrix();
+      Pj().popMatrix();
     }
   } finally {
-    Oj().popMatrix();
+    Pj().popMatrix();
   }
 }
-function Vj(a) {
+function Xj(a) {
   a = null != a && (a.h & 64 || a.Z) ? Od(ge, a) : a;
   var b = G(a, zh);
   a = G(a, wg);
-  var c = null != b && (b.h & 64 || b.Z) ? Od(ge, b) : b, d = G(c, $g), e = G(c, Zg), b = G(c, zi), c = G(c, ri), d = e - d, b = c - b, b = d > b ? d : b, d = Z.width, e = Z.height, c = d < e ? d : e;
-  Oj().background(0, 0, 0);
-  Tj.a(.5 * d, .5 * e);
-  Oj().scale(1, -1);
-  Oj().scale(c / b);
-  Oj().strokeWeight(b / c / .5);
+  var c = null != b && (b.h & 64 || b.Z) ? Od(ge, b) : b, d = G(c, $g), e = G(c, Zg), b = G(c, Ai), c = G(c, si), d = e - d, b = c - b, b = d > b ? d : b, d = Z.width, e = Z.height, c = d < e ? d : e;
+  Pj().background(0, 0, 0);
+  Uj.a(.5 * d, .5 * e);
+  Pj().scale(1, -1);
+  Pj().scale(c / b);
+  Pj().strokeWeight(b / c / .5);
   a = I(a);
   b = null;
   for (c = e = 0;;) {
     if (c < e) {
-      d = b.L(null, c), Uj(d), c += 1;
+      d = b.L(null, c), Wj(d), c += 1;
     } else {
       if (a = I(a)) {
-        b = a, Xc(b) ? (a = Mb(b), e = Nb(b), b = a, d = Q(a), a = e, e = d) : (d = K(b), Uj(d), a = M(b), b = null, e = 0), c = 0;
+        b = a, Xc(b) ? (a = Mb(b), e = Nb(b), b = a, d = Q(a), a = e, e = d) : (d = K(b), Wj(d), a = M(b), b = null, e = 0), c = 0;
       } else {
         return null;
       }
@@ -8037,7 +8040,7 @@ yd.b(" ");
 z("state map is missing :navigation-2d key. ");
 z("Did you accidentally removed it from the state in ");
 z(":update or any other handler?");
-function Wj(a) {
+function Yj(a) {
   var b = th.a(a, function() {
     return null;
   });
@@ -8048,8 +8051,8 @@ function Wj(a) {
     };
   }(b));
 }
-function Xj(a) {
-  var b = si.a(a, function() {
+function Zj(a) {
+  var b = ti.a(a, function() {
     return null;
   }), c = kh.a(a, ld), b = function(a, b) {
     return function() {
@@ -8057,22 +8060,22 @@ function Xj(a) {
       return a.b ? a.b(c) : a.call(null, c);
     };
   }(b, c);
-  return S.f(Pc.a(a, kh), si, b);
-}
-function Yj() {
-  return new q(null, 2, [li, Z.mouseX, ng, Z.mouseY], null);
-}
-function Zj() {
-  return new q(null, 3, [li, Z.mouseX, ng, Z.mouseY, Sg, Rj()], null);
+  return S.f(Pc.a(a, kh), ti, b);
 }
 function ak() {
+  return new q(null, 2, [li, Z.mouseX, ng, Z.mouseY], null);
+}
+function bk() {
+  return new q(null, 3, [li, Z.mouseX, ng, Z.mouseY, Sg, Sj()], null);
+}
+function ck() {
   var a;
   a = Z.key;
   var b = Z.keyCode;
-  a = u(N.a(65535, ("" + z(a)).charCodeAt())) ? ic(Pj, b, ci) : yd.b("" + z(a));
-  return new q(null, 3, [Kg, a, og, Z.keyCode, oi, Z.key], null);
+  a = u(N.a(65535, ("" + z(a)).charCodeAt())) ? ic(Qj, b, ci) : yd.b("" + z(a));
+  return new q(null, 3, [Kg, a, og, Z.keyCode, pi, Z.key], null);
 }
-var bk = function bk() {
+var dk = function dk() {
   for (var b = [], c = arguments.length, d = 0;;) {
     if (d < c) {
       b.push(arguments[d]), d += 1;
@@ -8082,17 +8085,17 @@ var bk = function bk() {
   }
   switch(b.length) {
     case 2:
-      return bk.a(arguments[0], arguments[1]);
+      return dk.a(arguments[0], arguments[1]);
     case 3:
-      return bk.f(arguments[0], arguments[1], arguments[2]);
+      return dk.f(arguments[0], arguments[1], arguments[2]);
     default:
       throw Error([z("Invalid arity: "), z(b.length)].join(""));;
   }
 };
-bk.a = function(a, b) {
-  return bk.f(a, b, null);
+dk.a = function(a, b) {
+  return dk.f(a, b, null);
 };
-bk.f = function(a, b, c) {
+dk.f = function(a, b, c) {
   var d = a.b ? a.b(b) : a.call(null, b);
   return u(d) ? S.f(a, b, u(c) ? function(a) {
     return function() {
@@ -8104,13 +8107,13 @@ bk.f = function(a, b, c) {
     };
   }(d, d)) : a;
 };
-bk.w = 3;
-function ck(a, b) {
+dk.w = 3;
+function ek(a, b) {
   return id(function(a, b) {
-    return b instanceof T ? bk.a(a, b) : Pd(bk, a, b);
+    return b instanceof T ? dk.a(a, b) : Pd(dk, a, b);
   }, a, b);
 }
-function dk(a) {
+function fk(a) {
   var b = Tg.b(a);
   return u(b) ? S.f(a, Tg, function(a) {
     return function(b) {
@@ -8118,64 +8121,66 @@ function dk(a) {
     };
   }(b, b)) : a;
 }
-function ek(a) {
-  return dk(ck(Xj(Wj(a)), Fc([xh, Jh, new U(null, 2, 5, V, [Fh, Yj], null), new U(null, 2, 5, V, [Fg, Yj], null), new U(null, 2, 5, V, [uh, Zj], null), new U(null, 2, 5, V, [Ag, Yj], null), new U(null, 2, 5, V, [zg, Zj], null), new U(null, 2, 5, V, [ch, function() {
+function gk(a) {
+  return fk(ek(Zj(Yj(a)), Fc([xh, Jh, new U(null, 2, 5, V, [Eh, ak], null), new U(null, 2, 5, V, [Fg, ak], null), new U(null, 2, 5, V, [uh, bk], null), new U(null, 2, 5, V, [Ag, ak], null), new U(null, 2, 5, V, [zg, bk], null), new U(null, 2, 5, V, [ch, function() {
     return new q(null, 4, [li, Z.mouseX, ng, Z.mouseY, Uh, Z.pmouseX, vg, Z.pmouseY], null);
-  }], null), new U(null, 2, 5, V, [Ci, function() {
-    return new q(null, 5, [li, Z.mouseX, ng, Z.mouseY, Uh, Z.pmouseX, vg, Z.pmouseY, Sg, Rj()], null);
-  }], null), new U(null, 2, 5, V, [Mh, ak], null), Nh, new U(null, 2, 5, V, [yg, ak], null), Og], 0)));
+  }], null), new U(null, 2, 5, V, [Di, function() {
+    return new q(null, 5, [li, Z.mouseX, ng, Z.mouseY, Uh, Z.pmouseX, vg, Z.pmouseY, Sg, Sj()], null);
+  }], null), new U(null, 2, 5, V, [Mh, ck], null), Nh, new U(null, 2, 5, V, [yg, ck], null), Og], 0)));
 }
-;function fk(a) {
-  return ek(a);
+;function hk(a) {
+  return gk(a);
 }
-;function gk() {
-  Oj().smooth();
-  Qj();
-  return new q(null, 2, [zh, new q(null, 4, [$g, -20, Zg, 20, zi, -20, ri, 20], null), wg, function() {
-    return function b(c) {
+;function ik(a) {
+  Pj().smooth();
+  Rj();
+  return new q(null, 2, [zh, new q(null, 4, [$g, -20, Zg, 20, Ai, -20, si, 20], null), wg, function() {
+    return function c(a) {
       return new Ad(null, function() {
         for (;;) {
-          var d = I(c);
-          if (d) {
-            if (Xc(d)) {
-              var e = Mb(d), f = Q(e), h = Ed(f);
+          var e = I(a);
+          if (e) {
+            if (Xc(e)) {
+              var f = Mb(e), h = Q(f), k = Ed(h);
               a: {
-                for (var k = 0;;) {
-                  if (k < f) {
-                    B.a(e, k);
-                    var l = new q(null, 4, [eh, .6, Bi, 1, lh, new U(null, 2, 5, V, [new U(null, 2, 5, V, [40 * Math.random() - 20, 40 * Math.random() - 20], null), new U(null, 2, 5, V, [0, 0], null)], null), mh, new q(null, 1, [Ch, Mi()], null)], null);
-                    h.add(l);
-                    k += 1;
+                for (var l = 0;;) {
+                  if (l < h) {
+                    B.a(f, l);
+                    var m = new q(null, 4, [eh, .6, Ci, 1, lh, new U(null, 2, 5, V, [new U(null, 2, 5, V, [40 * Math.random() - 20, 40 * Math.random() - 20], null), new U(null, 2, 5, V, [0, 0], null)], null), mh, new q(null, 1, [Ch, Ni()], null)], null);
+                    k.add(m);
+                    l += 1;
                   } else {
-                    e = !0;
+                    f = !0;
                     break a;
                   }
                 }
               }
-              return e ? Gd(h.$(), b(Nb(d))) : Gd(h.$(), null);
+              return f ? Gd(k.$(), c(Nb(e))) : Gd(k.$(), null);
             }
-            K(d);
-            return P(new q(null, 4, [eh, .6, Bi, 1, lh, new U(null, 2, 5, V, [new U(null, 2, 5, V, [40 * Math.random() - 20, 40 * Math.random() - 20], null), new U(null, 2, 5, V, [0, 0], null)], null), mh, new q(null, 1, [Ch, Mi()], null)], null), b(kc(d)));
+            K(e);
+            return P(new q(null, 4, [eh, .6, Ci, 1, lh, new U(null, 2, 5, V, [new U(null, 2, 5, V, [40 * Math.random() - 20, 40 * Math.random() - 20], null), new U(null, 2, 5, V, [0, 0], null)], null), mh, new q(null, 1, [Ch, Ni()], null)], null), c(kc(e)));
           }
           return null;
         }
       }, null, null);
-    }(new Zf(null, 0, 100, 1, null));
+    }(new Zf(null, 0, a, 1, null));
   }()], null);
 }
-function hk(a, b, c) {
-  a = new q(null, 3, [eh, b, Bi, c, Bh, a], null);
-  c = null != a && (a.h & 64 || a.Z) ? Od(ge, a) : a;
-  a = G(c, eh);
-  b = G(c, Bi);
-  c = G(c, Bh);
-  a = Fc([rh, "Flocking Behaviors", Bh, c, th, gk, si, Vj, kh, Ri, vh, new U(null, 1, 5, V, [fk], null), qh, new U(null, 2, 5, V, [a, b], null)], 0);
-  return Od(Lj, a);
+function jk(a) {
+  var b = null != a && (a.h & 64 || a.Z) ? Od(ge, a) : a, c = G(b, eh), d = G(b, Ci), e = G(b, Bh), f = G(b, mi);
+  return Vj(Fc([rh, "Flocking Behaviors", Bh, e, th, function(a, b, c, d, e, f) {
+    return function() {
+      return ik(f);
+    };
+  }(a, b, c, d, e, f), ti, Xj, kh, Si, vh, new U(null, 1, 5, V, [hk], null), qh, new U(null, 2, 5, V, [c, d], null)], 0));
 }
-var ik = ["flocking", "game_launcher", "launch_app"], jk = aa;
-ik[0] in jk || !jk.execScript || jk.execScript("var " + ik[0]);
-for (var kk;ik.length && (kk = ik.shift());) {
-  ik.length || void 0 === hk ? jk = jk[kk] ? jk[kk] : jk[kk] = {} : jk[kk] = hk;
+function kk(a, b, c, d) {
+  return jk(new q(null, 4, [eh, b, Ci, c, Bh, a, mi, d], null));
+}
+var lk = ["flocking", "game_launcher", "launch_app"], mk = aa;
+lk[0] in mk || !mk.execScript || mk.execScript("var " + lk[0]);
+for (var nk;lk.length && (nk = lk.shift());) {
+  lk.length || void 0 === kk ? mk = mk[nk] ? mk[nk] : mk[nk] = {} : mk[nk] = kk;
 }
 ;
 })();

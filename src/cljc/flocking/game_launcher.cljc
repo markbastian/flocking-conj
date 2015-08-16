@@ -12,7 +12,10 @@
   (q/frame-rate 30)
   {:world { :minx (- dim) :maxx dim :miny (- dim) :maxy dim }
    :boids (for [_ (range num-boids)]
-            {:width 0.6 :height 1.0 :state [[(- (* 2 dim (Math/random)) dim) (- (* 2 dim (Math/random)) dim)] [0 0]] :behaviors { :wander (rules/gen-wander) }})})
+            {:width 0.6
+             :height 1.0
+             :state [[(- (* 2 dim (Math/random)) dim) (- (* 2 dim (Math/random)) dim)] [0 0]]
+             :behaviors { :wander (rules/gen-wander) }})})
 
 (defn launch-sketch [{:keys[width height host num-boids]}]
   (q/sketch
@@ -24,7 +27,7 @@
     :middleware [m/fun-mode]
     :size [width height]))
 
-;#?(:clj (launch-sketch { :width 600 :height 600 :num-boids 100 }))
+#?(:clj (launch-sketch { :width 600 :height 600 :num-boids 100 }))
 
 #?(:cljs (defn ^:export launch-app[host width height num-boids]
            (launch-sketch { :width width :height height :host host :num-boids num-boids })))

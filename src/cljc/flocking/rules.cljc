@@ -18,4 +18,4 @@
 (defn gen-wander []
   { :wander-direction (* 2 Math/PI (Math/random))
    :wander-rate (Math/random)
-   :wander-strength (* 5 (Math/random)) })
+   :wander-strength (* 1 (Math/random)) })
