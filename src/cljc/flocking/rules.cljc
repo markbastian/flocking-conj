@@ -36,12 +36,6 @@
 (defn cohere [[pos _] {:keys [strength] } average-pos]
   (weighted-vec pos strength average-pos))
 
-;(defn align [[_ vel] {:keys [strength] } average-vel]
-;  (vec/scale (vec/sub average-vel vel) strength))
-
-;(defn cohere [[pos _] {:keys [strength] } average-pos]
-;  (vec/scale (vec/sub average-pos pos) strength))
-
 (defn gen-wander []
   { :direction (* 2 Math/PI (Math/random))
    :rate (Math/random)
