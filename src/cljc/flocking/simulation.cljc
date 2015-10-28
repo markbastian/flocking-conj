@@ -17,38 +17,12 @@
       (update-in [:state 0 0] #(w % minx maxx))
       (update-in [:state 0 1] #(w % miny maxy))))
 
-(defn wall-force [pos wall]
-  (let [d (vec/sub pos wall)
-        m (vec/mag d)]
-    (vec/scale d (/ 1.0 m m m))))
-
-(defn wall-avoidance [[x y :as pos] {:keys [minx maxx miny maxy]}]
-  (mapv + (wall-force pos [minx y])
-        (wall-force pos [maxx y])
-        (wall-force pos [x miny])
-        (wall-force pos [x maxy])))
-
-(defmulti steer (fn [_ behavior] (key behavior)))
-
-(defmethod steer :wander [args behavior]
-  (rules/wander args (val behavior)))
-
-(defmethod steer :separation [args behavior]
-  (rules/separate args (val behavior)))
-
-(defmethod steer :cohesion [args behavior]
-  (rules/cohere args (val behavior)))
-
-(defmethod steer :alignment [args behavior]
-  (rules/align args (val behavior)))
-
-(defmethod steer :default [_ _][0 0])
-
-;Encapsulate each behavior such that it contributes if present and does nothing if not.
 (defn sim-boid [{:keys [state max-speed behaviors] :as boid-state } boids dt world ap av]
   (let [[pos vel] state
         steering-args {:state state :flock boids :average-position ap :average-velocity av }
-        forces (->> behaviors (map (partial steer steering-args )) (apply map +))
+        forces (->> behaviors
+                    (map #((-> % val :sim-action) steering-args (-> % val)))
+                    (apply map +))
         vprime (vec/add vel (map #(* % dt) forces))
         vmag (vec/mag vprime)
         vp (if (zero? vmag) vel (map #(* max-speed (/ % vmag)) vprime))

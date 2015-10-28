@@ -24,10 +24,11 @@
                :color [0 255 0]
                :max-speed 5.0
                :state (gen-state world)
-               :behaviors { :wander (assoc (rules/gen-wander) :strength 10)
-                           :separation { :range 2 :strength 10 }
-                           :alignment { :strength 10 }
-                           :cohesion { :strength 50 }}})}))
+               :behaviors { :wander (into { :sim-action rules/wander }
+                                          (assoc (rules/gen-wander) :strength 10))
+                           :separation { :sim-action rules/separate :range 2 :strength 10 }
+                           :alignment { :sim-action rules/align :strength 10 }
+                           :cohesion { :sim-action rules/cohere :strength 50 }}})}))
 
 (defn launch-sketch [{:keys[width height host num-boids]}]
   (q/sketch
