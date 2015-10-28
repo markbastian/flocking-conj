@@ -28,24 +28,27 @@
         (wall-force pos [x miny])
         (wall-force pos [x maxy])))
 
-(defmulti steer (fn [boid-state behavior] (:type behavior)))
-(defmethod steer :wander [boid-state behavior]
-  (assoc-in boid-state [:forces :wander] (rules/wander boid-state behavior)))
-(defmethod steer :default [boid_state _] boid_state)
+(defmulti steer (fn [_ behavior] (key behavior)))
+
+(defmethod steer :wander [args behavior]
+  (rules/wander args (val behavior)))
+
+(defmethod steer :separation [args behavior]
+  (rules/separate args (val behavior)))
+
+(defmethod steer :cohesion [args behavior]
+  (rules/cohere args (val behavior)))
+
+(defmethod steer :alignment [args behavior]
+  (rules/align args (val behavior)))
+
+(defmethod steer :default [_ _][0 0])
 
 ;Encapsulate each behavior such that it contributes if present and does nothing if not.
 (defn sim-boid [{:keys [state max-speed behaviors] :as boid-state } boids dt world ap av]
   (let [[pos vel] state
-        x (for [b behaviors] (steer state b))
-        separation-acceleration (rules/separate state (:separation behaviors) boids)
-        alignment-acceleration (rules/align state (:alignment behaviors) av)
-        cohesion-acceleration (rules/cohere state (:cohesion behaviors) ap)
-        wander-acceleration (rules/wander state (:wander behaviors))
-        forces (map +
-                    separation-acceleration
-                    alignment-acceleration
-                    cohesion-acceleration
-                    wander-acceleration)
+        steering-args {:state state :flock boids :average-position ap :average-velocity av }
+        forces (->> behaviors (map (partial steer steering-args )) (apply map +))
         vprime (vec/add vel (map #(* % dt) forces))
         vmag (vec/mag vprime)
         vp (if (zero? vmag) vel (map #(* max-speed (/ % vmag)) vprime))

@@ -9,18 +9,18 @@
 
 (defn tovec[m d]((juxt #(* m (Math/cos %)) #(* m (Math/sin %))) d))
 
-(defn wander [[_ velocity] {:keys [direction strength]}]
-  (let [m (vec/mag velocity)
+(defn wander [{:keys [state]} {:keys [direction strength]}]
+  (let [velocity (state 1)
+        m (vec/mag velocity)
         f (if (zero? m) velocity (map #(* (Math/sqrt 2.0) (/ % m)) velocity))
         w (tovec strength direction)]
     (vec/add f w)))
 
-(defn separate [[pos _] separation boids]
-  (let [{:keys [range strength]} separation
-        nearby (for [{[p] :state } boids
-                     :let [dp (vec/sub pos p) m (vec/mag dp)]
+(defn separate [{:keys [state flock]}  {:keys [range strength]}]
+  (let [nearby (for [{[p] :state } flock
+                     :let [dp (vec/sub (state 0) p) m (vec/mag dp)]
                      :when (<= 0 m range) ]
-                 (if (zero? m) pos (vec/scale dp (/ strength m m))))]
+                 (if (zero? m) (state 0) (vec/scale dp (/ strength m m))))]
     (apply mapv + nearby)))
 
 (defn weighted-vec [vec strength average-vec]
@@ -30,11 +30,11 @@
       [0 0]
       (vec/scale dv (/ strength mag)))))
 
-(defn align [[_ vel] {:keys [strength] } average-vel]
-  (weighted-vec vel strength average-vel))
+(defn align [{:keys [state average-velocity]} {:keys [strength] }]
+  (weighted-vec (state 1) strength average-velocity))
 
-(defn cohere [[pos _] {:keys [strength] } average-pos]
-  (weighted-vec pos strength average-pos))
+(defn cohere [{:keys [state average-position]} {:keys [strength] }]
+  (weighted-vec (state 0) strength average-position))
 
 (defn gen-wander []
   { :direction (* 2 Math/PI (Math/random))
