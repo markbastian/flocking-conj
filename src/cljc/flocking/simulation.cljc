@@ -28,13 +28,15 @@
         (wall-force pos [x miny])
         (wall-force pos [x maxy])))
 
-;(defmulti steer (fn [boid-state behavior] (:type behavior)))
-;(defmethod steer :wander [boid-state behavior]
-;  (assoc-in boid-state [:forces :wander] (rules/wander boid-state behavior)))
+(defmulti steer (fn [boid-state behavior] (:type behavior)))
+(defmethod steer :wander [boid-state behavior]
+  (assoc-in boid-state [:forces :wander] (rules/wander boid-state behavior)))
+(defmethod steer :default [boid_state _] boid_state)
 
 ;Encapsulate each behavior such that it contributes if present and does nothing if not.
 (defn sim-boid [{:keys [state max-speed behaviors] :as boid-state } boids dt world ap av]
   (let [[pos vel] state
+        x (for [b behaviors] (steer state b))
         separation-acceleration (rules/separate state (:separation behaviors) boids)
         alignment-acceleration (rules/align state (:alignment behaviors) av)
         cohesion-acceleration (rules/cohere state (:cohesion behaviors) ap)
