@@ -17,9 +17,9 @@
       (update-in [:state 0 0] #(w % minx maxx))
       (update-in [:state 0 1] #(w % miny maxy))))
 
-(defn sim-boid [{:keys [state max-speed behaviors] :as boid-state } boids dt world ap av]
+(defn sim-boid [{:keys [state max-speed behaviors] :as boid-state } {:keys [boids world] :as s} dt]
   (let [[pos vel] state
-        steering-args {:state state :flock boids :average-position ap :average-velocity av }
+        steering-args (into s {:state state :flock boids })
         forces (->> behaviors
                     (map #((-> % val :sim-action) steering-args (-> % val)))
                     (apply map +))
@@ -32,19 +32,17 @@
         (update-in [:behaviors :wander] rules/update-wander)
         (wrap world))))
 
-(defn averages [{:keys [boids]}]
+(defn averages [{:keys [boids] :as state}]
   (->> boids
        (map :state)
        (apply map vector)
-       (map #(apply mapv + %))
-       (mapv #(vec/scale % (/ 1.0 (count boids))))))
+       (map #(apply map + %))
+       (map #(vec/scale % (/ 1.0 (count boids))))
+       (zipmap [:average-position :average-velocity])
+       (into state)))
 
-(defn sim[{:keys [time boids world] :as s}]
+(defn sim[state]
   (let [t (.getTime #?(:clj (java.util.Date.) :cljs (js/Date.)))
-        dt (* (- t (or time t)) 1E-3)
-        [ap av] (averages s)
-        new-boids (for [boid boids]
-                    (sim-boid boid boids dt world ap av))]
-    (-> s
-        (into { :time t })
-        (into { :boids new-boids }))))
+        dt (* (- t (state :time t)) 1E-3)
+        new-boids (for [boid (:boids state)] (sim-boid boid state dt))]
+    (-> state (into { :time t :boids new-boids }) averages)))

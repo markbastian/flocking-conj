@@ -1,34 +1,35 @@
 (ns flocking.quil-renderer
   (:require [quil.core :as q #?@(:cljs [:include-macros true])]))
 
-(defn draw-boid [{[pos [vx vy]] :state
-                  { {:keys [direction strength rate]} :wander } :behaviors
-                  :keys [width height color]}]
+(defn debug-wander [{{ {:keys [direction strength rate debug]} :wander } :behaviors }]
+  (when debug
+    (q/fill 255)
+    (q/stroke 255)
+    (q/line [0 0] [(* 1 (Math/sqrt 2.0)) 0])
+    (q/with-translation
+      [(* 1 (Math/sqrt 2.0)) 0]
+      (q/no-fill)
+      (q/stroke 0 255 255)
+      (q/ellipse 0 0 2 2)
+      (q/with-rotation
+        [direction]
+        (q/stroke 255 255 0)
+        (q/begin-shape)
+        (apply q/vertex [0 0])
+        (apply q/vertex [strength 0])
+        (q/end-shape)
+        (q/with-translation
+          [strength 0]
+          (q/stroke 255 0 0)
+          (q/ellipse 0 0 (* 2 rate) (* 2 rate)))))))
+
+(defn draw-boid [{[pos [vx vy]] :state :keys [width height color] :as boid}]
   (let [tw (* 0.5 width) th (* 0.5 height)]
     (q/with-translation
       pos
       (q/with-rotation
         [(Math/atan2 vy vx)]
-        ;(q/fill 255)
-        ;(q/stroke 255)
-        ;(q/line [0 0] [(* 1 (Math/sqrt 2.0)) 0])
-        ;(q/with-translation
-        ;  [(* 1 (Math/sqrt 2.0)) 0]
-        ;  (q/no-fill)
-        ;  (q/stroke 0 255 255)
-        ;  (q/ellipse 0 0 2 2)
-        ;  (q/with-rotation
-        ;    [direction]
-        ;    (q/stroke 255 255 0)
-        ;    (q/begin-shape)
-        ;    (apply q/vertex [0 0])
-        ;    (apply q/vertex [strength 0])
-        ;    (q/end-shape)
-        ;    ;(q/line [0 0] [strength 0])
-        ;    (q/with-translation
-        ;      [strength 0]
-        ;      (q/stroke 255 0 0)
-        ;      (q/ellipse 0 0 (* 2 rate) (* 2 rate)))))
+        (debug-wander boid)
         (q/with-rotation
           [(q/radians -90)]
           (q/no-fill)
