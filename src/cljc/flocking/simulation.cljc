@@ -17,12 +17,17 @@
       (update-in [:state 0 0] #(w % minx maxx))
       (update-in [:state 0 1] #(w % miny maxy))))
 
+(defmulti steer (fn[behavior-name _ _ _] behavior-name))
+(defmethod steer :wander [_ behavior boid flock] (rules/wander behavior boid flock))
+(defmethod steer :separate [_ behavior boid flock] (rules/separate behavior boid flock))
+(defmethod steer :align [_ behavior boid flock] (rules/align behavior boid flock))
+(defmethod steer :cohere [_ behavior boid flock] (rules/cohere behavior boid flock))
+
 (defn sim-boid [{:keys [state max-speed behaviors] :as boid } world-state dt]
   (let [[pos vel] state
-        forces (->> behaviors
-                    (map #((-> % val :sim-action) (-> % val) boid world-state))
-                    (apply map +))
-        vprime (vec/add vel (map #(* % dt) forces))
+        forces (doto (for [[b behavior] behaviors]
+                       (steer b behavior boid world-state)))
+        vprime (vec/add vel (map #(* % dt) (apply map + forces)))
         vmag (vec/mag vprime)
         vp (if (zero? vmag) vel (map #(* max-speed (/ % vmag)) vprime))
         new-states [(vec/add pos (vec/scale vp dt)) vp]]
