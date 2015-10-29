@@ -17,20 +17,19 @@
       (update-in [:state 0 0] #(w % minx maxx))
       (update-in [:state 0 1] #(w % miny maxy))))
 
-(defn sim-boid [{:keys [state max-speed behaviors] :as boid-state } {:keys [boids world] :as s} dt]
+(defn sim-boid [{:keys [state max-speed behaviors] :as boid } world-state dt]
   (let [[pos vel] state
-        steering-args (into s {:state state :flock boids })
         forces (->> behaviors
-                    (map #((-> % val :sim-action) steering-args (-> % val)))
+                    (map #((-> % val :sim-action) (-> % val) boid world-state))
                     (apply map +))
         vprime (vec/add vel (map #(* % dt) forces))
         vmag (vec/mag vprime)
         vp (if (zero? vmag) vel (map #(* max-speed (/ % vmag)) vprime))
         new-states [(vec/add pos (vec/scale vp dt)) vp]]
-    (-> boid-state
+    (-> boid
         (assoc-in [:state] new-states)
         (update-in [:behaviors :wander] rules/update-wander)
-        (wrap world))))
+        (wrap (:world world-state)))))
 
 (defn averages [{:keys [boids] :as state}]
   (->> boids

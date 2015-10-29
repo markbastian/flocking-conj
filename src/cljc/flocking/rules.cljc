@@ -9,15 +9,15 @@
 
 (defn tovec[m d]((juxt #(* m (Math/cos %)) #(* m (Math/sin %))) d))
 
-(defn wander [{:keys [state]} {:keys [direction strength]}]
+(defn wander [{:keys [direction strength]} {:keys [state]} _]
   (let [velocity (state 1)
         m (vec/mag velocity)
         f (if (zero? m) velocity (map #(* (Math/sqrt 2.0) (/ % m)) velocity))
         w (tovec strength direction)]
     (vec/add f w)))
 
-(defn separate [{:keys [state flock]}  {:keys [range strength]}]
-  (let [nearby (for [{[p] :state } flock
+(defn separate [{:keys [range strength]} {:keys [state]} {:keys [boids]}]
+  (let [nearby (for [{[p] :state } boids
                      :let [dp (vec/sub (state 0) p) m (vec/mag dp)]
                      :when (<= 0 m range) ]
                  (if (zero? m) (state 0) (vec/scale dp (/ strength m m))))]
@@ -30,10 +30,10 @@
       [0 0]
       (vec/scale dv (/ strength mag)))))
 
-(defn align [{:keys [state average-velocity]} {:keys [strength] }]
+(defn align [{:keys [strength] } {:keys [state]} {:keys [average-velocity] }]
   (weighted-vec (state 1) strength average-velocity))
 
-(defn cohere [{:keys [state average-position]} {:keys [strength] }]
+(defn cohere [{:keys [strength] } {:keys [state]} {:keys [average-position] }]
   (weighted-vec (state 0) strength average-position))
 
 (defn gen-wander []
