@@ -16,6 +16,7 @@
 ;Multimethod for steering
 (defmulti steer (fn[behavior-name _ _ _] behavior-name))
 (defmethod steer :wander [_ behavior boid flock] (wander behavior boid flock))
+(defmethod steer :default [_ _ _ _] [0 0])
 
 ;Multimethod for updates to behaviors
 (defmulti update-behavior (fn[behavior-name _ _ _] behavior-name))
@@ -27,4 +28,4 @@
   (into {} (for [[b behavior] behaviors] [b (f b behavior boid world-state)])))
 
 (def compute-steering-forces (partial behaviors-calc steer))
-(def update-behaviors (partial update-behavior steer))
+(def update-behaviors (partial behaviors-calc update-behavior))

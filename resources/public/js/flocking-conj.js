@@ -1891,7 +1891,7 @@ var Tc = function Tc() {
   }
 };
 Tc.s = function() {
-  return Vc;
+  return Uc;
 };
 Tc.a = function(a) {
   return a;
@@ -2244,7 +2244,7 @@ k.call = function() {
     a = this;
     return a.g.s ? a.g.s() : a.g.call(null);
   }
-  var z = null, z = function(Fa, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, z, hb, wb, Pb, lc, Uc, Ld, qf) {
+  var z = null, z = function(Fa, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, z, hb, wb, Pb, lc, Vc, Ld, rf) {
     switch(arguments.length) {
       case 1:
         return ua.call(this, Fa);
@@ -2285,11 +2285,11 @@ k.call = function() {
       case 19:
         return d.call(this, Fa, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, z, hb, wb, Pb, lc);
       case 20:
-        return c.call(this, Fa, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, z, hb, wb, Pb, lc, Uc);
+        return c.call(this, Fa, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, z, hb, wb, Pb, lc, Vc);
       case 21:
-        return b.call(this, Fa, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, z, hb, wb, Pb, lc, Uc, Ld);
+        return b.call(this, Fa, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, z, hb, wb, Pb, lc, Vc, Ld);
       case 22:
-        return a.call(this, Fa, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, z, hb, wb, Pb, lc, Uc, Ld, qf);
+        return a.call(this, Fa, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, z, hb, wb, Pb, lc, Vc, Ld, rf);
     }
     throw Error("Invalid arity: " + arguments.length);
   };
@@ -3358,7 +3358,7 @@ var Yd = function Yd() {
   }
 };
 Yd.s = function() {
-  return Kb(Vc);
+  return Kb(Uc);
 };
 Yd.a = function(a) {
   return a;
@@ -3542,7 +3542,7 @@ var de = function de() {
   }, Ba.prototype.remove = function() {
     return Error("Unsupported operation");
   }, Ba.Cc = function() {
-    return new Q(null, 2, 5, R, [Pc(ee, new v(null, 1, [fe, Gd(ge, Gd(Vc))], null)), Aa.Bc], null);
+    return new Q(null, 2, 5, R, [Pc(ee, new v(null, 1, [fe, Gd(ge, Gd(Uc))], null)), Aa.Bc], null);
   }, Ba.Tb = !0, Ba.vb = "cljs.core/t_cljs$core10962", Ba.lc = function(b) {
     return Hb(b, "cljs.core/t_cljs$core10962");
   });
@@ -3880,16 +3880,16 @@ function me(a) {
   var b = ne;
   return function() {
     function c(c, d, e) {
-      return a.u ? a.u(b, c, d, e) : a.call(null, b, c, d, e);
+      return b.u ? b.u(a, c, d, e) : b.call(null, a, c, d, e);
     }
     function d(c, d) {
-      return a.c ? a.c(b, c, d) : a.call(null, b, c, d);
+      return b.c ? b.c(a, c, d) : b.call(null, a, c, d);
     }
     function e(c) {
-      return a.b ? a.b(b, c) : a.call(null, b, c);
+      return b.b ? b.b(a, c) : b.call(null, a, c);
     }
     function f() {
-      return a.a ? a.a(b) : a.call(null, b);
+      return b.a ? b.a(a) : b.call(null, a);
     }
     var g = null, h = function() {
       function c(a, b, e, f) {
@@ -3903,7 +3903,7 @@ function me(a) {
         return d.call(this, a, b, e, g);
       }
       function d(c, e, f, g) {
-        return ce(a, b, c, e, f, Oc([g], 0));
+        return ce(b, a, c, e, f, Oc([g], 0));
       }
       c.B = 3;
       c.C = function(a) {
@@ -4294,16 +4294,16 @@ var Ae = function Ae() {
 Ae.b = function(a, b) {
   return Xd(td(function(b, d) {
     return Yd.b(b, a.a ? a.a(d) : a.call(null, d));
-  }, Kb(Vc), b));
+  }, Kb(Uc), b));
 };
 Ae.c = function(a, b, c) {
-  return ze(Vc, U.c(a, b, c));
+  return ze(Uc, U.c(a, b, c));
 };
 Ae.u = function(a, b, c, d) {
-  return ze(Vc, U.u(a, b, c, d));
+  return ze(Uc, U.u(a, b, c, d));
 };
 Ae.m = function(a, b, c, d, e) {
-  return ze(Vc, ce(U, a, b, c, d, Oc([e], 0)));
+  return ze(Uc, ce(U, a, b, c, d, Oc([e], 0)));
 };
 Ae.C = function(a) {
   var b = I(a), c = J(a);
@@ -4546,7 +4546,7 @@ k.Wa = function() {
   return new Pe(this.j, this.shift, Qe.a ? Qe.a(this.root) : Qe.call(null, this.root), Re.a ? Re.a(this.ra) : Re.call(null, this.ra));
 };
 k.Y = function() {
-  return Pc(Vc, this.o);
+  return Pc(Uc, this.o);
 };
 k.oa = function(a, b) {
   return Dc(this, b);
@@ -4647,7 +4647,7 @@ k.a = function(a) {
 k.b = function(a, b) {
   return this.ya(null, a, b);
 };
-var R = new Fe(null, [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]), Vc = new Q(null, 0, 5, R, [], Ac);
+var R = new Fe(null, [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]), Uc = new Q(null, 0, 5, R, [], Ac);
 function Ue(a) {
   var b = a.length;
   if (32 > b) {
@@ -4665,7 +4665,7 @@ Q.prototype[Va] = function() {
   return xc(this);
 };
 function Ve(a) {
-  return Ra(a) ? Ue(a) : Mb(td(Lb, Kb(Vc), a));
+  return Ra(a) ? Ue(a) : Mb(td(Lb, Kb(Uc), a));
 }
 var We = function We() {
   for (var b = [], c = arguments.length, d = 0;;) {
@@ -4722,7 +4722,7 @@ k.A = function(a, b) {
   return Mc(this, b);
 };
 k.Y = function() {
-  return Pc(Vc, this.o);
+  return Pc(Uc, this.o);
 };
 k.oa = function(a, b) {
   var c;
@@ -4860,7 +4860,7 @@ k.A = function(a, b) {
   return Mc(this, b);
 };
 k.Y = function() {
-  return Pc(Vc, this.o);
+  return Pc(Uc, this.o);
 };
 k.oa = function(a, b) {
   return Dc(this, b);
@@ -5383,7 +5383,7 @@ k.A = function(a, b) {
   }
 };
 k.Wa = function() {
-  return new rf({}, this.f.length, Wa(this.f));
+  return new qf({}, this.f.length, Wa(this.f));
 };
 k.Y = function() {
   return vb(he, this.o);
@@ -5493,14 +5493,14 @@ var he = new v(null, 0, [], Cc), sf = 8;
 v.prototype[Va] = function() {
   return xc(this);
 };
-function rf(a, b, c) {
+function qf(a, b, c) {
   this.Ya = a;
   this.Ta = b;
   this.f = c;
   this.i = 258;
   this.D = 56;
 }
-k = rf.prototype;
+k = qf.prototype;
 k.X = function() {
   if (y(this.Ya)) {
     return Ad(this.Ta);
@@ -7506,7 +7506,7 @@ k.call = function() {
     y(c) || V(a.name, b);
     return c.s ? c.s() : c.call(null);
   }
-  var z = null, z = function(z, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, wc, hb, wb, Pb, lc, Uc, Ld, qf) {
+  var z = null, z = function(z, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, wc, hb, wb, Pb, lc, Vc, Ld, rf) {
     switch(arguments.length) {
       case 1:
         return ua.call(this, z);
@@ -7547,11 +7547,11 @@ k.call = function() {
       case 19:
         return d.call(this, z, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, wc, hb, wb, Pb, lc);
       case 20:
-        return c.call(this, z, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, wc, hb, wb, Pb, lc, Uc);
+        return c.call(this, z, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, wc, hb, wb, Pb, lc, Vc);
       case 21:
-        return b.call(this, z, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, wc, hb, wb, Pb, lc, Uc, Ld);
+        return b.call(this, z, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, wc, hb, wb, Pb, lc, Vc, Ld);
       case 22:
-        return a.call(this, z, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, wc, hb, wb, Pb, lc, Uc, Ld, qf);
+        return a.call(this, z, W, Y, ca, ea, ja, ka, ma, na, ta, ya, Ca, Ia, Na, wc, hb, wb, Pb, lc, Vc, Ld, rf);
     }
     throw Error("Invalid arity: " + arguments.length);
   };
@@ -8291,14 +8291,14 @@ function lk(a, b) {
 function mk(a) {
   var b = $f(Oc([new v(null, 1, [Vh, new Q(null, 2, 5, R, [500, 300], null)], null), function(b) {
     return b.a ? b.a(a) : b.call(null, a);
-  }.call(null, P(le, M(Kj, $h.b(a, Vc))))], 0)), c = function() {
+  }.call(null, P(le, M(Kj, $h.b(a, Uc))))], 0)), c = function() {
     var a = Vh.a(b);
     return y(a) ? a : new Q(null, 2, 5, R, [200, 200], null);
   }(), d = Uh.a(b), e = eg(Ng.a(b)), f = Ce.c(Ce.c(b, new Q(null, 1, 5, R, [Yh], null), function(a, b, c, d) {
     return function(e) {
       return function(a, b, c) {
         return function() {
-          P(kk, Wd.b(b, y(c) ? new Q(null, 1, 5, R, [c], null) : Vc));
+          P(kk, Wd.b(b, y(c) ? new Q(null, 1, 5, R, [c], null) : Uc));
           return y(e) ? e.s ? e.s() : e.call(null) : null;
         };
       }(a, b, c, d);
@@ -9233,8 +9233,8 @@ function rl(a, b) {
   }(h, l, a, c, d, e, b, f, g), h), d = ql(e, d);
   return pj(c, d);
 }
-if ("undefined" === typeof ne) {
-  var ne = function() {
+if ("undefined" === typeof sl) {
+  var sl = function() {
     var a = qe ? qe(he) : pe.call(null, he), b = qe ? qe(he) : pe.call(null, he), c = qe ? qe(he) : pe.call(null, he), d = qe ? qe(he) : pe.call(null, he), e = pc(he, bj, yg());
     return new Ig(rc.b("flocking.wander.rules", "steer"), function() {
       return function(a) {
@@ -9243,11 +9243,14 @@ if ("undefined" === typeof ne) {
     }(a, b, c, d, e), wh, e, a, b, c, d);
   }()
 }
-Jg(ne, gi, function(a, b, c) {
+Jg(sl, gi, function(a, b, c) {
   return rl(b, c);
 });
-if ("undefined" === typeof sl) {
-  var sl = function() {
+Jg(sl, wh, function() {
+  return new Q(null, 2, 5, R, [0, 0], null);
+});
+if ("undefined" === typeof tl) {
+  var tl = function() {
     var a = qe ? qe(he) : pe.call(null, he), b = qe ? qe(he) : pe.call(null, he), c = qe ? qe(he) : pe.call(null, he), d = qe ? qe(he) : pe.call(null, he), e = pc(he, bj, yg());
     return new Ig(rc.b("flocking.wander.rules", "update-behavior"), function() {
       return function(a) {
@@ -9256,13 +9259,13 @@ if ("undefined" === typeof sl) {
     }(a, b, c, d, e), wh, e, a, b, c, d);
   }()
 }
-Jg(sl, gi, function(a, b) {
+Jg(tl, gi, function(a, b) {
   return pl(b);
 });
-Jg(sl, wh, function(a, b) {
+Jg(tl, wh, function(a, b) {
   return b;
 });
-var tl = me(function(a, b, c, d) {
+function ne(a, b, c, d) {
   return ze(he, function() {
     return function f(b) {
       return new Md(null, function() {
@@ -9295,8 +9298,9 @@ var tl = me(function(a, b, c, d) {
       }, null, null);
     }(b);
   }());
-}), ul = me(sl);
-function vl(a, b, c) {
+}
+var ul = me(sl), vl = me(tl);
+function wl(a, b, c) {
   for (var d = c - b;;) {
     if (a < b) {
       a += d;
@@ -9309,20 +9313,20 @@ function vl(a, b, c) {
     }
   }
 }
-function wl(a, b) {
+function xl(a, b) {
   var c = null != b && (b.i & 64 || b.w) ? P(S, b) : b, d = E(c, Ah), e = E(c, zh), f = E(c, gj), g = E(c, Zi);
   return Ce.c(Ce.c(a, new Q(null, 3, 5, R, [Oh, 0, 0], null), function(a, b, c, d) {
     return function(a) {
-      return vl(a, c, d);
+      return wl(a, c, d);
     };
   }(b, c, d, e, f, g)), new Q(null, 3, 5, R, [Oh, 0, 1], null), function(a, b, c, d, e, f) {
     return function(a) {
-      return vl(a, e, f);
+      return wl(a, e, f);
     };
   }(b, c, d, e, f, g));
 }
-function xl(a, b, c) {
-  var d = null != a && (a.i & 64 || a.w) ? P(S, a) : a, e = E(d, Oh), f = E(d, Ph), g = E(d, Hh), h = N(e, 0), l = N(e, 1), m = pf(tl.c ? tl.c(f, d, b) : tl.call(null, f, d, b)), n = pj(l, U.b(function() {
+function yl(a, b, c) {
+  var d = null != a && (a.i & 64 || a.w) ? P(S, a) : a, e = E(d, Oh), f = E(d, Ph), g = E(d, Hh), h = N(e, 0), l = N(e, 1), m = pf(ul.c ? ul.c(f, d, b) : ul.call(null, f, d, b)), n = pj(l, U.b(function() {
     return function(a) {
       return a * c;
     };
@@ -9333,24 +9337,24 @@ function xl(a, b, c) {
     };
   }(e, h, l, m, n, p, a, d, d, e, f, g), n);
   h = new Q(null, 2, 5, R, [pj(h, rj(a, c)), a], null);
-  f = ul.c ? ul.c(f, d, b) : ul.call(null, f, d, b);
-  return wl(Zc.c(Zc.c(d, Oh, h), Ph, f), di.a(b));
+  f = vl.c ? vl.c(f, d, b) : vl.call(null, f, d, b);
+  return xl(Zc.c(Zc.c(d, Oh, h), Ph, f), di.a(b));
 }
-function yl(a) {
+function zl(a) {
   var b = (new Date).getTime(), c = .001 * (b - (a.b ? a.b(Ch, b) : a.call(null, Ch, b)));
-  return ze(a, new v(null, 2, [Ch, b, ti, xl(ti.a(a), a, c)], null));
+  return ze(a, new v(null, 2, [Ch, b, ti, yl(ti.a(a), a, c)], null));
 }
-;var zl = new v(null, 2, [di, new v(null, 4, [Ah, -20, zh, 20, gj, -20, Zi, 20], null), ti, new v(null, 6, [Fh, .6, jj, 1, fh, new Q(null, 3, 5, R, [0, 255, 0], null), Hh, 5, Oh, new Q(null, 2, 5, R, [new Q(null, 2, 5, R, [0, 0], null), new Q(null, 2, 5, R, [0, 5], null)], null), Ph, new v(null, 1, [gi, new v(null, 3, [Ee, 0, Rh, .5, ji, 10], null)], null)], null)], null);
-function Al(a) {
+;var Al = new v(null, 2, [di, new v(null, 4, [Ah, -20, zh, 20, gj, -20, Zi, 20], null), ti, new v(null, 6, [Fh, .6, jj, 1, fh, new Q(null, 3, 5, R, [0, 255, 0], null), Hh, 5, Oh, new Q(null, 2, 5, R, [new Q(null, 2, 5, R, [0, 0], null), new Q(null, 2, 5, R, [0, 5], null)], null), Ph, new v(null, 1, [gi, new v(null, 3, [Ee, 0, Rh, .5, ji, 10], null)], null)], null)], null);
+function Bl(a) {
   var b = null != a && (a.i & 64 || a.w) ? P(S, a) : a, c = E(b, Fh), d = E(b, jj), e = E(b, fi);
   return Ek(Oc([Wh, "Flocking Behaviors", fi, e, Yh, function() {
     return function() {
-      return zl;
+      return Al;
     };
-  }(a, b, c, d, e), $i, ll, Mh, yl, $h, new Q(null, 1, 5, R, [Ok], null), Vh, new Q(null, 2, 5, R, [c, d], null)], 0));
+  }(a, b, c, d, e), $i, ll, Mh, zl, $h, new Q(null, 1, 5, R, [Ok], null), Vh, new Q(null, 2, 5, R, [c, d], null)], 0));
 }
 ha("flocking.wander.core.launch_app", function(a, b, c) {
-  return Al(new v(null, 3, [Fh, b, jj, c, fi, a], null));
+  return Bl(new v(null, 3, [Fh, b, jj, c, fi, a], null));
 });
 
 })();
