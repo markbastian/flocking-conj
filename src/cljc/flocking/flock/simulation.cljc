@@ -19,13 +19,11 @@
 
 (defn sim-boid [{:keys [state behaviors max-speed] :as boid } world-state dt]
   (let [[pos vel] state
-        ;NOTE: Added basic integrator for behaviors
         forces (vals (rules/compute-steering-forces behaviors boid world-state))
         vprime (vec/add vel (map #(* % dt) (apply map + forces)))
         vmag (vec/mag vprime)
         vp (if (zero? vmag) vel (map #(* max-speed (/ % vmag)) vprime))
         new-states [(vec/add pos (vec/scale vp dt)) vp]
-        ;NOTE: Added abiliy to register behaviors themselves
         new-behaviors (rules/update-behaviors behaviors boid world-state)]
     (-> boid
         (assoc :state new-states)
@@ -34,5 +32,7 @@
 
 (defn sim[state]
   (let [t (.getTime #?(:clj (java.util.Date.) :cljs (js/Date.)))
-        dt (* (- t (state :time t)) 1E-3)]
-    (into state { :time t :boid (sim-boid (:boid state) state dt) }) ))
+        dt (* (- t (state :time t)) 1E-3)
+        ;One line to go from one to many
+        new-boids (for [boid (:boids state)] (sim-boid boid state dt))]
+    (into state { :time t :boids new-boids }) ))
