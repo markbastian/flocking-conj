@@ -30,9 +30,21 @@
         (assoc :behaviors new-behaviors)
         (wrap (:world world-state)))))
 
+(defn averages [{:keys [flock] :as state}]
+  (->> flock
+       (map :state)
+       (apply map vector)
+       (map #(apply map + %))
+       (map #(vec/scale % (/ 1.0 (count flock))))
+       (zipmap [:average-position :average-velocity])
+       (into state)))
+
 (defn sim[state]
   (let [t (.getTime #?(:clj (java.util.Date.) :cljs (js/Date.)))
         dt (* (- t (state :time t)) 1E-3)
         ;One line to go from one to many
         new-flock (for [boid (:flock state)] (sim-boid boid state dt))]
-    (into state { :time t :flock new-flock }) ))
+    ;(averages (into state { :time t :flock new-flock }))
+    (-> state
+        (into { :time t :flock new-flock })
+        averages)))
