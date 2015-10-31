@@ -43,23 +43,10 @@
 (defmethod steer :cohere [_ behavior boid flock] (cohere behavior boid flock))
 (defmethod steer :default [_ _ _ _] [0 0])
 
-;(defn steer [behavior-key behavior boid flock]
-;  (case behavior-key
-;    :wander (wander behavior boid flock)
-;    :separate (separate behavior boid flock)
-;    :align (align behavior boid flock)
-;    :cohere (cohere behavior boid flock)
-;    [0 0]))
-
 ;Multimethod for updates to behaviors
 (defmulti update-behavior (fn[behavior-name _ _ _] behavior-name))
 (defmethod update-behavior :wander [_ behavior _ _] (update-wander behavior))
 (defmethod update-behavior :default [_ behavior _ _] behavior)
-
-;(defn update-behavior [behavior-key behavior boid flock]
-;  (case behavior-key
-;    :wander (update-wander behavior)
-;    behavior))
 
 ;Methods to iterate over updates
 (defn behaviors-calc[f behaviors boid world-state]
