@@ -1,7 +1,7 @@
 (defproject
-  flocking "0.1.0-SNAPSHOT"
-  :description "An implementation of flocking behaviors in Clojure"
-  :url "https://github.com/markbastian/flocking"
+  flocking-conj "0.1.0-SNAPSHOT"
+  :description "An implementation of flocking behaviors in Clojure, modified for presentation at Clojure/conj 2015."
+  :url "https://github.com/markbastian/flocking-conj"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.7.0"]
@@ -22,6 +22,6 @@
   :clj {:builds [{ :source-paths ["src/clj" "src/cljc" "test"] }]}
 
   :cljsbuild {:builds [{ :source-paths ["src/cljs" "src/cljc"]
-                        :compiler { :output-to "resources/public/js/flocking.js"
+                        :compiler { :output-to "resources/public/js/flocking-conj.js"
                                    :optimizations :advanced
                                    :pretty-print true}}]})

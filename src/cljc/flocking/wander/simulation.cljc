@@ -1,5 +1,5 @@
-(ns flocking.simulation
-  (:require [flocking.rules :as rules]
+(ns flocking.wander.simulation
+  (:require [flocking.wander.rules :as rules]
             [vecmath.vec :as vec]))
 
 (defn w [v lo hi]
@@ -17,14 +17,13 @@
       (update-in [:state 0 0] #(w % minx maxx))
       (update-in [:state 0 1] #(w % miny maxy))))
 
+;Multimethod for steering
 (defmulti steer (fn[behavior-name _ _ _] behavior-name))
 (defmethod steer :wander [_ behavior boid flock] (rules/wander behavior boid flock))
-(defmethod steer :separate [_ behavior boid flock] (rules/separate behavior boid flock))
-(defmethod steer :align [_ behavior boid flock] (rules/align behavior boid flock))
-(defmethod steer :cohere [_ behavior boid flock] (rules/cohere behavior boid flock))
 
-(defn sim-boid [{:keys [state max-speed behaviors] :as boid } world-state dt]
+(defn sim-boid [{:keys [state behaviors max-speed] :as boid } world-state dt]
   (let [[pos vel] state
+        ;NOTE: Added basic integrator for behaviors
         forces (for [[b behavior] behaviors] (steer b behavior boid world-state))
         vprime (vec/add vel (map #(* % dt) (apply map + forces)))
         vmag (vec/mag vprime)
@@ -32,20 +31,11 @@
         new-states [(vec/add pos (vec/scale vp dt)) vp]]
     (-> boid
         (assoc-in [:state] new-states)
+        ;TODO - fix bad mojo here!!!!
         (update-in [:behaviors :wander] rules/update-wander)
         (wrap (:world world-state)))))
 
-(defn averages [{:keys [boids] :as state}]
-  (->> boids
-       (map :state)
-       (apply map vector)
-       (map #(apply map + %))
-       (map #(vec/scale % (/ 1.0 (count boids))))
-       (zipmap [:average-position :average-velocity])
-       (into state)))
-
 (defn sim[state]
   (let [t (.getTime #?(:clj (java.util.Date.) :cljs (js/Date.)))
-        dt (* (- t (state :time t)) 1E-3)
-        new-boids (for [boid (:boids state)] (sim-boid boid state dt))]
-    (-> state (into { :time t :boids new-boids }) averages)))
+        dt (* (- t (state :time t)) 1E-3)]
+    (into state { :time t :boid (sim-boid (:boid state) state dt) }) ))

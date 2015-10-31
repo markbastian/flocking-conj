@@ -40,7 +40,7 @@
     :middleware [m/fun-mode]
     :size [width height]))
 
-#?(:clj (launch-sketch { :width 600 :height 600 :num-boids 100 }))
+;#?(:clj (launch-sketch { :width 600 :height 600 :num-boids 100 }))
 
 #?(:cljs (defn ^:export launch-app[host width height num-boids]
            (launch-sketch { :width width :height height :host host :num-boids num-boids })))
