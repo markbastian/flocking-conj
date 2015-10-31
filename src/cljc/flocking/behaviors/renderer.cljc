@@ -1,4 +1,4 @@
-(ns flocking.flock.renderer
+(ns flocking.behaviors.renderer
   (:require
     [quil.core :as q #?@(:cljs [:include-macros true])]))
 

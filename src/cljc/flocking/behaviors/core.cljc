@@ -1,9 +1,9 @@
-(ns flocking.flock.core
+(ns flocking.behaviors.core
   (:require
     [quil.core :as q #?@(:cljs [:include-macros true])]
     [quil.middleware :as m]
-    [flocking.flock.simulation :as sim]
-    [flocking.flock.renderer :as qr]))
+    [flocking.behaviors.simulation :as sim]
+    [flocking.behaviors.renderer :as qr]))
 
 (def initial-state
   {:world { :minx (- 20) :maxx 20 :miny (- 20) :maxy 20 }

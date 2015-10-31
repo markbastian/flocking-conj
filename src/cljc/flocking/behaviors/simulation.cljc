@@ -1,5 +1,5 @@
-(ns flocking.flock.simulation
-  (:require [flocking.flock.rules :as rules]
+(ns flocking.behaviors.simulation
+  (:require [flocking.behaviors.rules :as rules]
             [vecmath.vec :as vec]))
 
 (defn w [v lo hi]
