@@ -30,6 +30,7 @@
     :middleware [m/fun-mode]
     :size [width height]))
 
+;Uncomment to run Clojure version in REPL
 ;#?(:clj (launch-sketch { :width 600 :height 600 :num-boids 100 }))
 
 #?(:cljs (defn ^:export launch-app[host width height]

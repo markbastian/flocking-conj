@@ -17,22 +17,19 @@
       (update-in [:state 0 0] #(w % minx maxx))
       (update-in [:state 0 1] #(w % miny maxy))))
 
-;Multimethod for steering
-(defmulti steer (fn[behavior-name _ _ _] behavior-name))
-(defmethod steer :wander [_ behavior boid flock] (rules/wander behavior boid flock))
-
 (defn sim-boid [{:keys [state behaviors max-speed] :as boid } world-state dt]
   (let [[pos vel] state
         ;NOTE: Added basic integrator for behaviors
-        forces (for [[b behavior] behaviors] (steer b behavior boid world-state))
+        forces (vals (rules/compute-steering-forces behaviors boid world-state))
         vprime (vec/add vel (map #(* % dt) (apply map + forces)))
         vmag (vec/mag vprime)
         vp (if (zero? vmag) vel (map #(* max-speed (/ % vmag)) vprime))
-        new-states [(vec/add pos (vec/scale vp dt)) vp]]
+        new-states [(vec/add pos (vec/scale vp dt)) vp]
+        ;NOTE: Added abiliy to register behaviors themselves
+        new-behaviors (rules/update-behaviors behaviors boid world-state)]
     (-> boid
-        (assoc-in [:state] new-states)
-        ;TODO - fix bad mojo here!!!!
-        (update-in [:behaviors :wander] rules/update-wander)
+        (assoc :state new-states)
+        (assoc :behaviors new-behaviors)
         (wrap (:world world-state)))))
 
 (defn sim[state]
