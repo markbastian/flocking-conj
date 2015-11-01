@@ -9,7 +9,7 @@
                  [numerics "0.1.0-SNAPSHOT"]
                  [quil "2.2.6"]]
 
-  :main flocking.launcher
+  ;:main flocking.launcher
 
   :jar-exclusions [#"\.swp|\.swo|\.DS_Store"]
   :profiles {:uberjar {:aot :all}
